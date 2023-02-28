@@ -1,0 +1,155 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.test"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:4:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:5:5-43:19
+20        android:allowBackup="true"
+20-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:6:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:7:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:fullBackupContent="@xml/backup_rules"
+25-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:8:9-54
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:9:9-43
+27        android:label="@string/app_name"
+27-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:10:9-41
+28        android:supportsRtl="true"
+28-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:11:9-35
+29        android:testOnly="true"
+30        android:theme="@style/Theme.Test" >
+30-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:12:9-42
+31        <activity
+31-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:14:9-20:20
+32            android:name="com.example.test.RecipesActivity"
+32-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:14:19-50
+33            android:exported="true" >
+33-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:15:13-36
+34            <intent-filter>
+34-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:16:9-19:25
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:17:13-65
+35-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:17:21-62
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:18:13-73
+37-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:18:23-70
+38            </intent-filter>
+39        </activity>
+40        <activity
+40-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:21:9-28:20
+41            android:name="com.example.test.RecipeDetailsActivity"
+41-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:22:13-50
+42            android:exported="true" >
+42-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:23:13-36
+43            <intent-filter>
+43-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:16:9-19:25
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:17:13-65
+44-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:17:21-62
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:18:13-73
+46-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:18:23-70
+47            </intent-filter>
+48        </activity>
+49        <activity
+49-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:29:9-33:61
+50            android:name="com.example.test.HomeActivity"
+50-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:30:13-41
+51            android:exported="false"
+51-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:31:13-37
+52            android:label="@string/title_activity_home"
+52-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:32:13-56
+53            android:theme="@style/Theme.Test.NoActionBar" />
+53-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:33:13-58
+54        <activity
+54-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:34:9-42:20
+55            android:name="com.example.test.PantryActivity"
+55-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:35:13-43
+56            android:exported="true" >
+56-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:36:13-36
+57            <intent-filter>
+57-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:16:9-19:25
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:17:13-65
+58-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:17:21-62
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:18:13-73
+60-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:18:23-70
+61            </intent-filter>
+62        </activity>
+63
+64        <provider
+64-->[com.squareup.picasso:picasso:2.71828] C:\Users\gavin\.gradle\caches\transforms-3\5b8a5d9fddb58353f844c2f1e2121d5e\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+65            android:name="com.squareup.picasso.PicassoProvider"
+65-->[com.squareup.picasso:picasso:2.71828] C:\Users\gavin\.gradle\caches\transforms-3\5b8a5d9fddb58353f844c2f1e2121d5e\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+66            android:authorities="com.example.test.com.squareup.picasso"
+66-->[com.squareup.picasso:picasso:2.71828] C:\Users\gavin\.gradle\caches\transforms-3\5b8a5d9fddb58353f844c2f1e2121d5e\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+67            android:exported="false" />
+67-->[com.squareup.picasso:picasso:2.71828] C:\Users\gavin\.gradle\caches\transforms-3\5b8a5d9fddb58353f844c2f1e2121d5e\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+68        <provider
+68-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+69            android:name="androidx.startup.InitializationProvider"
+69-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+70            android:authorities="com.example.test.androidx-startup"
+70-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+71            android:exported="false" >
+71-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+72            <meta-data
+72-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+73-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+74                android:value="androidx.startup" />
+74-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+75            <meta-data
+75-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavin\.gradle\caches\transforms-3\b0761d22b5c86c7f873b7a426ffce717\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+76-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavin\.gradle\caches\transforms-3\b0761d22b5c86c7f873b7a426ffce717\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+77                android:value="androidx.startup" />
+77-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavin\.gradle\caches\transforms-3\b0761d22b5c86c7f873b7a426ffce717\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+78        </provider>
+79
+80        <uses-library
+80-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+81            android:name="androidx.window.extensions"
+81-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+82            android:required="false" />
+82-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+83        <uses-library
+83-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+84            android:name="androidx.window.sidecar"
+84-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+86    </application>
+87
+88</manifest>

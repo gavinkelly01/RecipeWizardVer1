@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\list_item.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\activity_recipes.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_recipes.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\activity_recipe_details.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_recipe_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\activity_pantry.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_pantry.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-41:\\layout\\recipe_item.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\recipe_item.xml"
+    },
+    {
+        "merged": "com.example.test.app-mergeDebugResources-41:/layout/activity_recipe_details.xml",
+        "source": "com.example.test.app-main-44:/layout/activity_recipe_details.xml"
+    }
+]
