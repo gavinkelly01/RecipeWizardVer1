@@ -6,41 +6,67 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.test.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityPantryBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final Button addButton;
 
   @NonNull
+  public final BottomNavigationView bottomNavigationPantry;
+
+  @NonNull
   public final EditText editText;
+
+  @NonNull
+  public final Button featbutton;
+
+  @NonNull
+  public final FrameLayout fragmentContainer;
 
   @NonNull
   public final ListView listView;
 
-  private ActivityPantryBinding(@NonNull LinearLayout rootView, @NonNull Button addButton,
-      @NonNull EditText editText, @NonNull ListView listView) {
+  @NonNull
+  public final BottomNavigationView navView;
+
+  @NonNull
+  public final RecyclerView recyclerView;
+
+  private ActivityPantryBinding(@NonNull ConstraintLayout rootView, @NonNull Button addButton,
+      @NonNull BottomNavigationView bottomNavigationPantry, @NonNull EditText editText,
+      @NonNull Button featbutton, @NonNull FrameLayout fragmentContainer,
+      @NonNull ListView listView, @NonNull BottomNavigationView navView,
+      @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
     this.addButton = addButton;
+    this.bottomNavigationPantry = bottomNavigationPantry;
     this.editText = editText;
+    this.featbutton = featbutton;
+    this.fragmentContainer = fragmentContainer;
     this.listView = listView;
+    this.navView = navView;
+    this.recyclerView = recyclerView;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -71,9 +97,27 @@ public final class ActivityPantryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bottom_navigation_pantry;
+      BottomNavigationView bottomNavigationPantry = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigationPantry == null) {
+        break missingId;
+      }
+
       id = R.id.edit_text;
       EditText editText = ViewBindings.findChildViewById(rootView, id);
       if (editText == null) {
+        break missingId;
+      }
+
+      id = R.id.featbutton;
+      Button featbutton = ViewBindings.findChildViewById(rootView, id);
+      if (featbutton == null) {
+        break missingId;
+      }
+
+      id = R.id.fragment_container;
+      FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (fragmentContainer == null) {
         break missingId;
       }
 
@@ -83,7 +127,21 @@ public final class ActivityPantryBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPantryBinding((LinearLayout) rootView, addButton, editText, listView);
+      id = R.id.nav_view;
+      BottomNavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
+        break missingId;
+      }
+
+      id = R.id.recycler_view;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
+        break missingId;
+      }
+
+      return new ActivityPantryBinding((ConstraintLayout) rootView, addButton,
+          bottomNavigationPantry, editText, featbutton, fragmentContainer, listView, navView,
+          recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

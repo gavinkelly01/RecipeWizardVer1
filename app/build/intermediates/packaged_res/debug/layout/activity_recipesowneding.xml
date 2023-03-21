@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="124dp"
+            android:layout_height="122dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/chicken_kiev_2_1_sq" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Omelette"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Ingredients"
+            android:textStyle="bold" />
+
+
+        <ListView
+            android:id="@+id/ingredientsList"
+            android:layout_width="157dp"
+            android:layout_height="202dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instructions:"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garlic butter filling: Place ingredients in a bowl and mix until combined."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shape and chill butter: Scrape butter on to a small sheet of baking / parchment paper and roughly shape into 10 x 6cm / 4 x 2.4\"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pound chicken: Place chicken smooth side down between two freezer bags or paper (Note 3). Pound to an even 0.5 cm / 0.2\" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Season: Sprinkle each side of the chicken with salt and pepper."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stuff and roll up chicken: Place a baton of butter in the middle. Trim edges if needed, then add trimmings into the centre. Fold sides in over the butter, then roll the chicken up starting from the bottom, finishing with the seam side down."/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preheat oven to 180°C / 350°F. Place a rack on a tray."/>
+    </LinearLayout>
+
+</ScrollView>

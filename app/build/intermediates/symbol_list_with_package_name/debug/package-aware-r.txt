@@ -82,6 +82,8 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array car_ui_ime_wide_screen_allowed_package_list
+attr CarUiToolbarStyle
 attr SharedValue
 attr SharedValueId
 attr action
@@ -98,6 +100,7 @@ attr actionBarTheme
 attr actionBarWidgetTheme
 attr actionButtonStyle
 attr actionDropDownStyle
+attr actionEnabled
 attr actionLayout
 attr actionMenuTextAppearance
 attr actionMenuTextColor
@@ -119,16 +122,23 @@ attr actionModeWebSearchDrawable
 attr actionOverflowButtonStyle
 attr actionOverflowMenuStyle
 attr actionProviderClass
+attr actionShown
 attr actionTextColorAlpha
 attr actionViewClass
+attr activatable
+attr activated
 attr activityAction
 attr activityChooserViewStyle
 attr activityName
 attr addElevationShadow
+attr adjustable
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
+attr allowDividerAbove
+attr allowDividerAfterLastItem
+attr allowDividerBelow
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
@@ -194,6 +204,7 @@ attr borderRoundPercent
 attr borderWidth
 attr borderlessButtonStyle
 attr bottomAppBarStyle
+attr bottomBoundOffset
 attr bottomInsetScrimEnabled
 attr bottomNavigationStyle
 attr bottomSheetDialogTheme
@@ -223,10 +234,22 @@ attr buttonIconDimen
 attr buttonIconTint
 attr buttonIconTintMode
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr carUiActivity
+attr carUiBaseLayout
+attr carUiClickableWhileDisabled
+attr carUiIcon
+attr carUiLayout
+attr carUiPreferenceStyle
+attr carUiRecyclerViewStyle
+attr carUiShowChevron
+attr carUiSize
+attr carUiToolbar
+attr car_ui_ux_restricted
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -247,10 +270,13 @@ attr carousel_touchUp_dampeningFactor
 attr carousel_touchUp_velocityThreshold
 attr centerIfNoTextEnabled
 attr chainUseRtl
+attr checkBoxPreferenceStyle
 attr checkMarkCompat
 attr checkMarkTint
 attr checkMarkTintMode
+attr checkable
 attr checkboxStyle
+attr checked
 attr checkedButton
 attr checkedChip
 attr checkedIcon
@@ -282,6 +308,7 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
 attr circularflow_angles
@@ -348,6 +375,7 @@ attr colorPrimaryDark
 attr colorPrimaryInverse
 attr colorPrimarySurface
 attr colorPrimaryVariant
+attr colorScheme
 attr colorSecondary
 attr colorSecondaryContainer
 attr colorSecondaryVariant
@@ -423,18 +451,29 @@ attr daySelectedStyle
 attr dayStyle
 attr dayTodayStyle
 attr defaultDuration
+attr defaultFocus
+attr defaultFocusOverridesHistory
 attr defaultMarginsEnabled
 attr defaultNavHost
 attr defaultQueryHint
 attr defaultScrollFlagsEnabled
 attr defaultState
+attr defaultValue
 attr deltaPolarAngle
 attr deltaPolarRadius
+attr dependency
 attr deriveConstraintsFrom
 attr destination
 attr dialogCornerRadius
+attr dialogIcon
+attr dialogLayout
+attr dialogMessage
+attr dialogPreferenceStyle
 attr dialogPreferredPadding
 attr dialogTheme
+attr dialogTitle
+attr disableDependentsState
+attr displayBehavior
 attr displayOptions
 attr divider
 attr dividerColor
@@ -462,17 +501,23 @@ attr drawerLayoutCornerSize
 attr drawerLayoutStyle
 attr dropDownListViewStyle
 attr dropdownListPreferredItemHeight
+attr dropdownPreferenceStyle
 attr duration
 attr dynamicColorThemeOverlay
 attr editTextBackground
 attr editTextColor
+attr editTextPreferenceStyle
 attr editTextStyle
 attr elevation
 attr elevationOverlayAccentColor
 attr elevationOverlayColor
 attr elevationOverlayEnabled
 attr emojiCompatEnabled
+attr enableCopying
+attr enableDivider
 attr enableEdgeToEdge
+attr enabled
+attr endBoundOffset
 attr endIconCheckable
 attr endIconContentDescription
 attr endIconDrawable
@@ -485,6 +530,8 @@ attr enforceMaterialTheme
 attr enforceTextAppearance
 attr ensureMinTouchTargetSize
 attr enterAnim
+attr entries
+attr entryValues
 attr errorAccessibilityLabel
 attr errorAccessibilityLiveRegion
 attr errorContentDescription
@@ -581,6 +628,7 @@ attr fontWeight
 attr forceApplySystemWindowInsetTop
 attr forceDefaultNavigationOnClickListener
 attr foregroundInsidePadding
+attr fragment
 attr framePosition
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
@@ -600,12 +648,19 @@ attr hideMotionSpec
 attr hideNavigationIcon
 attr hideOnContentScroll
 attr hideOnScroll
+attr highlightPaddingBottom
+attr highlightPaddingEnd
+attr highlightPaddingHorizontal
+attr highlightPaddingStart
+attr highlightPaddingTop
+attr highlightPaddingVertical
 attr hintAnimationEnabled
 attr hintEnabled
 attr hintTextAppearance
 attr hintTextColor
 attr homeAsUpIndicator
 attr homeLayout
+attr horizontalBoundOffset
 attr horizontalOffset
 attr horizontalOffsetWithText
 attr hoveredFocusedTranslationZ
@@ -614,12 +669,16 @@ attr iconEndPadding
 attr iconGravity
 attr iconPadding
 attr iconSize
+attr iconSpaceReserved
 attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
+attr id
 attr ifTagNotSet
 attr ifTagSet
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr imagePanX
 attr imagePanY
@@ -633,11 +692,13 @@ attr indicatorDirectionLinear
 attr indicatorInset
 attr indicatorSize
 attr initialActivityCount
+attr initialExpandedChildrenCount
 attr insetForeground
 attr isLightTheme
 attr isMaterial3DynamicColorApplied
 attr isMaterial3Theme
 attr isMaterialTheme
+attr isPreferenceVisible
 attr itemActiveIndicatorStyle
 attr itemBackground
 attr itemFillColor
@@ -667,6 +728,7 @@ attr itemTextAppearanceActive
 attr itemTextAppearanceInactive
 attr itemTextColor
 attr itemVerticalPadding
+attr key
 attr keyPositionType
 attr keyboardIcon
 attr keylines
@@ -681,6 +743,7 @@ attr layout
 attr layoutDescription
 attr layoutDuringTransition
 attr layoutManager
+attr layoutStyle
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -838,8 +901,10 @@ attr measureWithLargestChild
 attr menu
 attr menuAlignmentMode
 attr menuGravity
+attr menuItems
 attr methodName
 attr mimeType
+attr min
 attr minHeight
 attr minHideDelay
 attr minSeparation
@@ -905,12 +970,25 @@ attr navigationIconTint
 attr navigationMode
 attr navigationRailStyle
 attr navigationViewStyle
+attr negativeButtonText
 attr nestedScrollFlags
 attr nestedScrollViewStyle
 attr nestedScrollable
+attr nudgeDown
+attr nudgeDownShortcut
+attr nudgeLeft
+attr nudgeLeftShortcut
+attr nudgeRight
+attr nudgeRightShortcut
+attr nudgeShortcut
+attr nudgeShortcutDirection
+attr nudgeUp
+attr nudgeUpShortcut
 attr nullable
+attr numOfColumns
 attr number
 attr numericModifiers
+attr onClick
 attr onCross
 attr onHide
 attr onNegativeCross
@@ -918,6 +996,8 @@ attr onPositiveCross
 attr onShow
 attr onStateTransition
 attr onTouchUp
+attr order
+attr orderingFromXml
 attr overlapAnchor
 attr overlay
 attr paddingBottomNoButtons
@@ -943,6 +1023,7 @@ attr percentWidth
 attr percentX
 attr percentY
 attr perpendicularPath_percent
+attr persistent
 attr pivotAnchor
 attr placeholderActivityName
 attr placeholderText
@@ -959,6 +1040,16 @@ attr popupMenuBackground
 attr popupMenuStyle
 attr popupTheme
 attr popupWindowStyle
+attr positiveButtonText
+attr preferenceCategoryStyle
+attr preferenceCategoryTitleTextAppearance
+attr preferenceFragmentCompatStyle
+attr preferenceFragmentListStyle
+attr preferenceFragmentStyle
+attr preferenceInformationStyle
+attr preferenceScreenStyle
+attr preferenceStyle
+attr preferenceTheme
 attr prefixText
 attr prefixTextAppearance
 attr prefixTextColor
@@ -991,27 +1082,38 @@ attr removeEmbeddedFabElevation
 attr restoreState
 attr reverseLayout
 attr rippleColor
+attr rotaryScrollEnabled
 attr rotationCenterId
 attr round
 attr roundPercent
 attr route
 attr saturation
 attr scaleFromTextSize
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
+attr search
+attr searchHint
 attr searchHintIcon
 attr searchIcon
 attr searchPrefixText
 attr searchViewStyle
+attr secondaryActionIcon
+attr secondaryActionStyle
+attr secondaryActionText
 attr secondaryActivityAction
 attr secondaryActivityName
+attr seekBarIncrement
+attr seekBarPreferenceStyle
 attr seekBarStyle
+attr selectable
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
 attr selectionRequired
 attr selectorSize
 attr setsTag
+attr settings
 attr shapeAppearance
 attr shapeAppearanceCornerExtraLarge
 attr shapeAppearanceCornerExtraSmall
@@ -1024,13 +1126,20 @@ attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
 attr shapeCornerFamily
 attr shortcutMatchRequired
+attr shouldDisableView
 attr shouldRemoveExpandedCorners
+attr shouldRestoreFocus
 attr showAnimationBehavior
 attr showAsAction
+attr showBackground
 attr showDelay
 attr showDividers
+attr showIconAndTitle
+attr showMenuItemsWhileSearching
 attr showMotionSpec
 attr showPaths
+attr showSeekBarValue
+attr showTabsInSubpage
 attr showText
 attr showTitle
 attr shrinkMotionSpec
@@ -1042,6 +1151,7 @@ attr simpleItemSelectedRippleColor
 attr simpleItems
 attr singleChoiceItemLayout
 attr singleLine
+attr singleLineTitle
 attr singleSelection
 attr sizePercent
 attr sliderStyle
@@ -1065,6 +1175,7 @@ attr springStopThreshold
 attr srcCompat
 attr stackFromEnd
 attr staggered
+attr startBoundOffset
 attr startDestination
 attr startIconCheckable
 attr startIconContentDescription
@@ -1081,6 +1192,7 @@ attr state_error
 attr state_indeterminate
 attr state_liftable
 attr state_lifted
+attr state_ux_restricted
 attr state_with_icon
 attr statusBarBackground
 attr statusBarForeground
@@ -1102,10 +1214,17 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
+attr summary
+attr summaryOff
+attr summaryOn
 attr switchMinWidth
 attr switchPadding
+attr switchPreferenceCompatStyle
+attr switchPreferenceStyle
 attr switchStyle
 attr switchTextAppearance
+attr switchTextOff
+attr switchTextOn
 attr tabBackground
 attr tabContentStart
 attr tabGravity
@@ -1228,6 +1347,7 @@ attr tickVisible
 attr tint
 attr tintMode
 attr tintNavigationIcon
+attr tinted
 attr title
 attr titleCentered
 attr titleCollapseMode
@@ -1252,6 +1372,7 @@ attr tooltipForegroundColor
 attr tooltipFrameBackground
 attr tooltipStyle
 attr tooltipText
+attr topBoundOffset
 attr topInsetScrimEnabled
 attr touchAnchorId
 attr touchAnchorSide
@@ -1279,11 +1400,15 @@ attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
 attr upDuration
+attr updatesContinuously
 attr uri
 attr useCompatPadding
 attr useDrawerArrowDrawable
 attr useMaterialThemeColors
+attr useSimpleSummaryProvider
+attr uxRestrictions
 attr values
+attr verticalBoundOffset
 attr verticalOffset
 attr verticalOffsetWithText
 attr viewInflaterClass
@@ -1292,6 +1417,7 @@ attr viewTransitionOnCross
 attr viewTransitionOnNegativeCross
 attr viewTransitionOnPositiveCross
 attr visibilityMode
+attr visible
 attr voiceIcon
 attr warmth
 attr waveDecay
@@ -1300,6 +1426,7 @@ attr wavePeriod
 attr wavePhase
 attr waveShape
 attr waveVariesBy
+attr widgetLayout
 attr windowActionBar
 attr windowActionBarOverlay
 attr windowActionModeOverlay
@@ -1310,11 +1437,32 @@ attr windowFixedWidthMinor
 attr windowMinWidthMajor
 attr windowMinWidthMinor
 attr windowNoTitle
+attr wrapAround
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool car_ui_alert_dialog_force_dismiss_button
+bool car_ui_clear_focus_area_history_when_rotating
+bool car_ui_enable_focus_area_background_highlight
+bool car_ui_enable_focus_area_foreground_highlight
+bool car_ui_escrow_check_components_automatically
+bool car_ui_focus_area_default_focus_overrides_history
+bool car_ui_ime_wide_screen_aligned_left
+bool car_ui_ime_wide_screen_allow_app_hide_content_area
+bool car_ui_list_item_single_line_title
+bool car_ui_preference_list_instant_change_callback
+bool car_ui_preference_list_show_full_screen
+bool car_ui_preference_show_chevron
+bool car_ui_scrollbar_enable
+bool car_ui_toolbar_logo_fills_nav_icon_space
+bool car_ui_toolbar_menuitem_individual_click_listeners
+bool car_ui_toolbar_nav_icon_reserve_space
+bool car_ui_toolbar_show_logo
+bool car_ui_toolbar_tab_flexible_layout
+bool car_ui_toolbar_tabs_on_second_row
+bool config_materialPreferenceIconSpaceReserved
 bool mtrl_btn_textappearance_all_caps
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
@@ -1356,12 +1504,61 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
+color car_ui_activity_background_color
+color car_ui_color_accent
+color car_ui_dialog_icon_color
+color car_ui_ime_wide_screen_description_color
+color car_ui_ime_wide_screen_description_title_color
+color car_ui_ime_wide_screen_divider_color
+color car_ui_ime_wide_screen_error_text_color
+color car_ui_ime_wide_screen_search_item_sub_title_color
+color car_ui_ime_wide_screen_search_item_title_color
+color car_ui_list_item_divider
+color car_ui_preference_icon_color
+color car_ui_preference_two_action_divider_color
+color car_ui_recyclerview_divider_color
+color car_ui_ripple_color
+color car_ui_rotary_focus_fill_color
+color car_ui_rotary_focus_fill_secondary_color
+color car_ui_rotary_focus_pressed_fill_color
+color car_ui_rotary_focus_pressed_fill_secondary_color
+color car_ui_rotary_focus_pressed_stroke_color
+color car_ui_rotary_focus_pressed_stroke_secondary_color
+color car_ui_rotary_focus_stroke_color
+color car_ui_rotary_focus_stroke_secondary_color
+color car_ui_scrollbar_arrow
+color car_ui_scrollbar_thumb
+color car_ui_text_color_hint
+color car_ui_text_color_primary
+color car_ui_text_color_secondary
+color car_ui_toolbar_menu_item_icon_background_color
+color car_ui_toolbar_menu_item_icon_color
+color car_ui_toolbar_nav_icon_color
+color car_ui_toolbar_search_hint_text_color
+color car_ui_toolbar_tab_item_selector
+color car_ui_toolbar_tab_selected_color
+color car_ui_toolbar_tab_unselected_color
 color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1932,6 +2129,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color preference_fallback_accent_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2042,6 +2240,154 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
+dimen car_ui_app_styled_dialog_height
+dimen car_ui_app_styled_dialog_height_max
+dimen car_ui_app_styled_dialog_position_x
+dimen car_ui_app_styled_dialog_position_y
+dimen car_ui_app_styled_dialog_width
+dimen car_ui_app_styled_dialog_width_max
+dimen car_ui_body1_size
+dimen car_ui_body2_size
+dimen car_ui_body3_size
+dimen car_ui_button_disabled_alpha
+dimen car_ui_dialog_edittext_height
+dimen car_ui_dialog_edittext_margin_bottom
+dimen car_ui_dialog_edittext_margin_end
+dimen car_ui_dialog_edittext_margin_start
+dimen car_ui_dialog_edittext_margin_top
+dimen car_ui_dialog_icon_size
+dimen car_ui_dialog_title_margin
+dimen car_ui_divider_width
+dimen car_ui_header_list_item_text_start_margin
+dimen car_ui_ime_wide_screen_action_button_height
+dimen car_ui_ime_wide_screen_action_button_margin_bottom
+dimen car_ui_ime_wide_screen_action_button_margin_left
+dimen car_ui_ime_wide_screen_action_button_text_size
+dimen car_ui_ime_wide_screen_description_padding_top
+dimen car_ui_ime_wide_screen_description_text_size
+dimen car_ui_ime_wide_screen_description_title_margin_top
+dimen car_ui_ime_wide_screen_description_title_padding_left
+dimen car_ui_ime_wide_screen_description_title_text_size
+dimen car_ui_ime_wide_screen_divider_width
+dimen car_ui_ime_wide_screen_error_text_padding_start
+dimen car_ui_ime_wide_screen_error_text_size
+dimen car_ui_ime_wide_screen_input_area_height
+dimen car_ui_ime_wide_screen_input_area_padding_end
+dimen car_ui_ime_wide_screen_input_area_padding_top
+dimen car_ui_ime_wide_screen_input_edit_text_padding_left
+dimen car_ui_ime_wide_screen_input_edit_text_padding_right
+dimen car_ui_ime_wide_screen_input_edit_text_size
+dimen car_ui_ime_wide_screen_input_padding_start
+dimen car_ui_ime_wide_screen_keyboard_area_padding_bottom
+dimen car_ui_ime_wide_screen_keyboard_area_padding_end
+dimen car_ui_ime_wide_screen_keyboard_area_padding_start
+dimen car_ui_ime_wide_screen_keyboard_width
+dimen car_ui_ime_wide_screen_recycler_view_padding_top
+dimen car_ui_ime_wide_search_item_icon_size
+dimen car_ui_ime_wide_search_item_secondary_image_padding_left
+dimen car_ui_ime_wide_search_item_sub_title_padding_left
+dimen car_ui_ime_wide_search_item_sub_title_padding_top
+dimen car_ui_ime_wide_search_item_sub_title_text_size
+dimen car_ui_ime_wide_search_item_title_padding_left
+dimen car_ui_ime_wide_search_item_title_padding_top
+dimen car_ui_ime_wide_search_item_title_text_size
+dimen car_ui_list_item_action_divider_height
+dimen car_ui_list_item_action_divider_width
+dimen car_ui_list_item_avatar_icon_height
+dimen car_ui_list_item_avatar_icon_width
+dimen car_ui_list_item_content_icon_height
+dimen car_ui_list_item_content_icon_width
+dimen car_ui_list_item_end_inset
+dimen car_ui_list_item_header_height
+dimen car_ui_list_item_header_start_inset
+dimen car_ui_list_item_height
+dimen car_ui_list_item_icon_container_width
+dimen car_ui_list_item_icon_size
+dimen car_ui_list_item_start_inset
+dimen car_ui_list_item_supplemental_icon_size
+dimen car_ui_list_item_text_no_icon_start_margin
+dimen car_ui_list_item_text_start_margin
+dimen car_ui_margin
+dimen car_ui_padding_0
+dimen car_ui_padding_1
+dimen car_ui_padding_2
+dimen car_ui_padding_3
+dimen car_ui_padding_4
+dimen car_ui_padding_5
+dimen car_ui_padding_6
+dimen car_ui_padding_7
+dimen car_ui_padding_8
+dimen car_ui_preference_category_icon_margin_end
+dimen car_ui_preference_category_icon_size
+dimen car_ui_preference_category_min_height
+dimen car_ui_preference_content_margin_bottom
+dimen car_ui_preference_content_margin_top
+dimen car_ui_preference_dropdown_padding_start
+dimen car_ui_preference_edit_text_dialog_margin_bottom
+dimen car_ui_preference_edit_text_dialog_margin_top
+dimen car_ui_preference_edit_text_dialog_message_margin_bottom
+dimen car_ui_preference_edit_text_dialog_message_margin_end
+dimen car_ui_preference_edit_text_dialog_message_margin_start
+dimen car_ui_preference_edit_text_dialog_text_margin_end
+dimen car_ui_preference_edit_text_dialog_text_margin_start
+dimen car_ui_preference_icon_margin_end
+dimen car_ui_preference_icon_size
+dimen car_ui_primary_icon_size
+dimen car_ui_recyclerview_divider_bottom_margin
+dimen car_ui_recyclerview_divider_end_margin
+dimen car_ui_recyclerview_divider_height
+dimen car_ui_recyclerview_divider_start_margin
+dimen car_ui_recyclerview_divider_top_margin
+dimen car_ui_rotary_focus_pressed_stroke_width
+dimen car_ui_rotary_focus_stroke_width
+dimen car_ui_scrollbar_button_size
+dimen car_ui_scrollbar_container_width
+dimen car_ui_scrollbar_decelerate_interpolator_factor
+dimen car_ui_scrollbar_deceleration_times_divisor
+dimen car_ui_scrollbar_margin
+dimen car_ui_scrollbar_milliseconds_per_inch
+dimen car_ui_scrollbar_min_thumb_height
+dimen car_ui_scrollbar_padding_bottom
+dimen car_ui_scrollbar_padding_top
+dimen car_ui_scrollbar_separator_margin
+dimen car_ui_scrollbar_thumb_radius
+dimen car_ui_scrollbar_thumb_width
+dimen car_ui_sub1_size
+dimen car_ui_sub2_size
+dimen car_ui_sub3_size
+dimen car_ui_toolbar_bottom_inset
+dimen car_ui_toolbar_bottom_view_height
+dimen car_ui_toolbar_end_inset
+dimen car_ui_toolbar_first_row_height
+dimen car_ui_toolbar_logo_size
+dimen car_ui_toolbar_margin
+dimen car_ui_toolbar_menu_item_icon_background_size
+dimen car_ui_toolbar_menu_item_icon_ripple_radius
+dimen car_ui_toolbar_menu_item_icon_size
+dimen car_ui_toolbar_menu_item_margin
+dimen car_ui_toolbar_nav_icon_size
+dimen car_ui_toolbar_row_height
+dimen car_ui_toolbar_search_close_icon_container_width
+dimen car_ui_toolbar_search_close_icon_size
+dimen car_ui_toolbar_search_height
+dimen car_ui_toolbar_search_search_icon_container_width
+dimen car_ui_toolbar_search_search_icon_size
+dimen car_ui_toolbar_second_row_height
+dimen car_ui_toolbar_separator_height
+dimen car_ui_toolbar_start_inset
+dimen car_ui_toolbar_tab_icon_height
+dimen car_ui_toolbar_tab_icon_width
+dimen car_ui_toolbar_tab_padding_x
+dimen car_ui_toolbar_tab_text_width
+dimen car_ui_toolbar_title_logo_padding
+dimen car_ui_toolbar_title_margin_start
+dimen car_ui_toolbar_title_no_logo_margin_start
+dimen car_ui_toolbar_top_inset
+dimen car_ui_touch_target_height
+dimen car_ui_touch_target_size
+dimen car_ui_touch_target_width
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2659,6 +3005,11 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen preference_dropdown_padding_start
+dimen preference_icon_minWidth
+dimen preference_seekbar_padding_horizontal
+dimen preference_seekbar_padding_vertical
+dimen preference_seekbar_value_minWidth
 dimen sliding_pane_detail_pane_width
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -2668,6 +3019,7 @@ dimen tooltip_precise_anchor_threshold
 dimen tooltip_vertical_padding
 dimen tooltip_y_offset_non_touch
 dimen tooltip_y_offset_touch
+dimen wrap_content
 drawable abc_ab_share_pack_mtrl_alpha
 drawable abc_action_bar_item_background_material
 drawable abc_btn_borderless_material
@@ -2757,12 +3109,87 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable car_ui_activity_background
+drawable car_ui_app_styled_view_background
+drawable car_ui_app_styled_view_ripple
+drawable car_ui_divider
+drawable car_ui_focus_area_background_highlight
+drawable car_ui_focus_area_foreground_highlight
+drawable car_ui_icon_add
+drawable car_ui_icon_arrow_back
+drawable car_ui_icon_chevron
+drawable car_ui_icon_close
+drawable car_ui_icon_delete
+drawable car_ui_icon_down
+drawable car_ui_icon_edit
+drawable car_ui_icon_error
+drawable car_ui_icon_lock
+drawable car_ui_icon_overflow_menu
+drawable car_ui_icon_save
+drawable car_ui_icon_search
+drawable car_ui_icon_search_nav_icon
+drawable car_ui_icon_settings
+drawable car_ui_ime_wide_screen_background
+drawable car_ui_ime_wide_screen_content_area_background
+drawable car_ui_ime_wide_screen_input_area_background
+drawable car_ui_ime_wide_screen_input_area_tint_color
+drawable car_ui_ime_wide_screen_input_area_tint_error_color
+drawable car_ui_ime_wide_screen_no_content_background
+drawable car_ui_list_header_background
+drawable car_ui_list_item_avatar_icon_outline
+drawable car_ui_list_item_background
+drawable car_ui_list_item_divider
+drawable car_ui_list_limiting_message_background
+drawable car_ui_preference_icon_chevron
+drawable car_ui_preference_icon_chevron_disabled
+drawable car_ui_preference_icon_chevron_enabled
+drawable car_ui_recyclerview_button_ripple_background
+drawable car_ui_recyclerview_button_ripple_background_private
+drawable car_ui_recyclerview_divider
+drawable car_ui_recyclerview_ic_down
+drawable car_ui_recyclerview_ic_down_private
+drawable car_ui_recyclerview_ic_up
+drawable car_ui_recyclerview_ic_up_private
+drawable car_ui_recyclerview_scrollbar_thumb
+drawable car_ui_recyclerview_scrollbar_thumb_private
+drawable car_ui_toolbar_background
+drawable car_ui_toolbar_menu_item_divider
+drawable car_ui_toolbar_menu_item_icon_background
+drawable car_ui_toolbar_menu_item_icon_ripple
+drawable car_ui_toolbar_search_close_icon
+drawable car_ui_toolbar_search_search_icon
+drawable chicken_enchiladas_739fd129b4f3439293859ba87f263162
+drawable chicken_kiev_2_1_sq
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable download__1_
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
+drawable hearty_chicken_enchiladas_exps_thjj21_23761_b02_10_2b
 drawable ic_arrow_back_black_24
+drawable ic_arrow_down_24dp
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2848,6 +3275,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable placeholder_image
+drawable preference_list_divider_material
+drawable roasted_garlic_and_herb_potato_wedges
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2871,6 +3300,16 @@ id Second3Fragment
 id SecondFragment
 id TOP_END
 id TOP_START
+id UX_RESTRICTIONS_FULLY_RESTRICTED
+id UX_RESTRICTIONS_LIMIT_CONTENT
+id UX_RESTRICTIONS_LIMIT_STRING_LENGTH
+id UX_RESTRICTIONS_NO_DIALPAD
+id UX_RESTRICTIONS_NO_FILTERING
+id UX_RESTRICTIONS_NO_KEYBOARD
+id UX_RESTRICTIONS_NO_SETUP
+id UX_RESTRICTIONS_NO_TEXT_MESSAGE
+id UX_RESTRICTIONS_NO_VIDEO
+id UX_RESTRICTIONS_NO_VOICE_TRANSCRIPTION
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2931,10 +3370,13 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_text
+id action_widget_container
 id actions
 id activity_chooser_view_content
 id add
 id add_button
+id adjust_height
+id adjust_width
 id alertTitle
 id aligned
 id all
@@ -2958,15 +3400,113 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id bordered
+id borderless
 id bottom
+id bottom_navigation_home
+id bottom_navigation_pantry
+id bottom_navigation_recipes
 id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id buttonPanel
 id cache_measures
 id callMeasure
 id cancel_button
+id car_ui_alert_icon
+id car_ui_alert_subtitle
+id car_ui_alert_title
+id car_ui_app_styled_content
+id car_ui_app_styled_item
+id car_ui_app_styled_view_icon_close
+id car_ui_app_styled_view_nav_icon_container
+id car_ui_base_layout_content_container
+id car_ui_closeKeyboard
+id car_ui_component_reference
+id car_ui_contentAreaAutomotive
+id car_ui_divider
+id car_ui_first_action_container
+id car_ui_focus_area
+id car_ui_fullscreenArea
+id car_ui_imeWideScreenInputArea
+id car_ui_ime_carboard_area
+id car_ui_ime_surface
+id car_ui_inputExtractActionAutomotive
+id car_ui_inputExtractEditTextContainer
+id car_ui_list_item_action_container
+id car_ui_list_item_action_container_touch_interceptor
+id car_ui_list_item_action_divider
+id car_ui_list_item_avatar_icon
+id car_ui_list_item_body
+id car_ui_list_item_checkbox_widget
+id car_ui_list_item_content_icon
+id car_ui_list_item_end_guideline
+id car_ui_list_item_icon
+id car_ui_list_item_icon_container
+id car_ui_list_item_radio_button_widget
+id car_ui_list_item_reduced_touch_interceptor
+id car_ui_list_item_start_guideline
+id car_ui_list_item_supplemental_icon
+id car_ui_list_item_switch_widget
+id car_ui_list_item_title
+id car_ui_list_item_touch_interceptor
+id car_ui_list_limiting_message
+id car_ui_preference_container_without_widget
+id car_ui_recycler_view
+id car_ui_scroll_bar
+id car_ui_scrollbar_page_down
+id car_ui_scrollbar_page_up
+id car_ui_scrollbar_thumb
+id car_ui_scrollbar_track
+id car_ui_second_action_container
+id car_ui_secondary_action
+id car_ui_secondary_action_concrete
+id car_ui_toolbar
+id car_ui_toolbar_background
+id car_ui_toolbar_bottom_guideline
+id car_ui_toolbar_bottom_styleable
+id car_ui_toolbar_end_guideline
+id car_ui_toolbar_logo
+id car_ui_toolbar_menu_item_icon
+id car_ui_toolbar_menu_item_icon_container
+id car_ui_toolbar_menu_item_switch
+id car_ui_toolbar_menu_item_text
+id car_ui_toolbar_menu_item_text_with_icon
+id car_ui_toolbar_menu_items_container
+id car_ui_toolbar_nav_icon
+id car_ui_toolbar_nav_icon_container
+id car_ui_toolbar_progress_bar
+id car_ui_toolbar_row_separator
+id car_ui_toolbar_row_separator_guideline
+id car_ui_toolbar_search_bar
+id car_ui_toolbar_search_close
+id car_ui_toolbar_search_icon
+id car_ui_toolbar_search_view_container
+id car_ui_toolbar_start_guideline
+id car_ui_toolbar_subtitle
+id car_ui_toolbar_tab_item_icon
+id car_ui_toolbar_tab_item_text
+id car_ui_toolbar_tabs
+id car_ui_toolbar_title
+id car_ui_toolbar_title_container
+id car_ui_toolbar_title_logo
+id car_ui_toolbar_title_logo_container
+id car_ui_toolbar_top_guideline
+id car_ui_web_view_last_focused_element
+id car_ui_wideScreenClearData
+id car_ui_wideScreenDescription
+id car_ui_wideScreenDescriptionTitle
+id car_ui_wideScreenError
+id car_ui_wideScreenErrorMessage
+id car_ui_wideScreenExtractedTextIcon
+id car_ui_wideScreenInputArea
+id car_ui_wideScreenSearchResultList
 id carryVelocity
 id center
 id centerCrop
@@ -3002,6 +3542,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id dark
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -3022,6 +3563,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id down
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3038,6 +3580,7 @@ id east
 id edit_query
 id edit_text
 id elastic
+id email_input
 id embed
 id end
 id endToStart
@@ -3046,8 +3589,18 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
+id featbutton
+id featuredButton1
+id featuredButton1Lbl
+id featuredButton2
+id featuredButton3
+id featuredRecipes1Img
+id featuredRecipes2Img
+id featuredRecipes2Lbl
+id featuredRecipes3Img
+id featuredRecipes3Lbl
+id featuredRecipesLbl
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3061,6 +3614,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3070,6 +3624,7 @@ id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
+id grid
 id group_divider
 id grouping
 id groups
@@ -3080,15 +3635,19 @@ id homeAsUp
 id honorRequest
 id horizontal_only
 id icon
+id icon_frame
 id icon_group
+id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
 id info
+id ingredientsList
 id invisible
 id inward
 id italic
@@ -3096,17 +3655,23 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
+id large
 id layout
 id left
 id leftToRight
 id legacy
+id light
 id line1
 id line3
 id linear
+id list
 id listMode
 id list_item
 id list_view
 id locale
+id login_button
+id login_layout
+id login_title
 id ltr
 id m3_side_sheet
 id marquee
@@ -3134,9 +3699,11 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id medium
 id message
 id middle
 id mini
+id mobile_navigation
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3174,7 +3741,7 @@ id nav_graph2
 id nav_graph3
 id nav_graph4
 id nav_host_fragment_container
-id nav_host_fragment_content_pantry
+id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3182,6 +3749,10 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
+id navigation_home
+id navigation_pantry
+id navigation_recipes
+id nested_recycler_view_layout
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3205,6 +3776,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password_input
 id password_toggle
 id path
 id pathRelative
@@ -3214,16 +3786,26 @@ id pin
 id position
 id postLayout
 id pressed
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
+id radio_button
 id ratio
+id recipe_description
 id recipe_image
 id recipe_ingredients
 id recipe_instructions
+id recipe_nutrition
 id recipe_title
 id rectangles
 id recycler_view
+id register_button
+id register_email
+id register_link
+id register_login_text
+id register_password
+id register_title
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3242,6 +3824,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3267,6 +3850,12 @@ id search_view_status_bar_spacer
 id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
+id seek_bar
+id seek_bar_text_left
+id seek_bar_text_right
+id seek_bar_text_top
+id seekbar
+id seekbar_value
 id select_dialog_listview
 id selected
 id selection_type
@@ -3282,6 +3871,7 @@ id skipped
 id slide
 id sliding_pane_detail_container
 id sliding_pane_layout
+id small
 id snackbar_action
 id snackbar_text
 id snap
@@ -3289,6 +3879,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinner
 id spline
 id split_action_bar
 id spread
@@ -3310,6 +3901,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id switchWidget
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3331,9 +3923,13 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView2
+id textView4
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id textbox
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3345,7 +3941,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3372,6 +3967,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id west
+id wide
 id withText
 id with_icon
 id withinBounds
@@ -3385,10 +3981,19 @@ integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration
 integer bottom_sheet_slide_duration
 integer cancel_button_image_alpha
+integer car_ui_default_max_string_length
+integer car_ui_focus_area_history_cache_type
+integer car_ui_focus_area_history_expiration_period_ms
+integer car_ui_focus_history_cache_type
+integer car_ui_focus_history_expiration_period_ms
+integer car_ui_scrollbar_longpress_initial_delay
+integer car_ui_scrollbar_longpress_repeat_interval
+integer car_ui_touch_mode_skip_restore_focus_ms
 integer config_navAnimTime
 integer config_tooltipAnimTime
 integer design_snackbar_text_max_lines
 integer design_tab_indicator_anim_duration_ms
+integer google_play_services_version
 integer hide_password_duration
 integer m3_btn_anim_delay_ms
 integer m3_btn_anim_duration_ms
@@ -3487,11 +4092,64 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_featuredrecipes
 layout activity_home
+layout activity_login
 layout activity_main
 layout activity_pantry
 layout activity_recipe_details
 layout activity_recipes
+layout activity_recipesowneding
+layout activity_register
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
+layout car_ui_alert_dialog_edit_text
+layout car_ui_alert_dialog_list
+layout car_ui_alert_dialog_title_with_subtitle
+layout car_ui_app_styled_view
+layout car_ui_app_styled_view_item
+layout car_ui_base_layout
+layout car_ui_base_layout_toolbar
+layout car_ui_base_layout_toolbar_legacy
+layout car_ui_base_layout_toolbar_legacy_two_row
+layout car_ui_header_list_item
+layout car_ui_ims_wide_screen_input_view
+layout car_ui_list_item
+layout car_ui_list_item_compact
+layout car_ui_list_limiting_message
+layout car_ui_list_preference
+layout car_ui_preference
+layout car_ui_preference_category
+layout car_ui_preference_chevron
+layout car_ui_preference_dialog_edittext
+layout car_ui_preference_dropdown
+layout car_ui_preference_fragment
+layout car_ui_preference_two_action_icon
+layout car_ui_preference_two_action_switch
+layout car_ui_preference_two_action_text
+layout car_ui_preference_two_action_text_borderless
+layout car_ui_preference_widget_checkbox
+layout car_ui_preference_widget_seekbar
+layout car_ui_preference_widget_switch
+layout car_ui_radio_button_preference_widget
+layout car_ui_recycler_view
+layout car_ui_recycler_view_item
+layout car_ui_recycler_view_medium
+layout car_ui_recycler_view_no_scrollbar
+layout car_ui_recycler_view_only
+layout car_ui_recycler_view_small
+layout car_ui_recyclerview_scrollbar
+layout car_ui_seekbar_dialog
+layout car_ui_toolbar
+layout car_ui_toolbar_menu_item
+layout car_ui_toolbar_menu_item_primary
+layout car_ui_toolbar_search_view
+layout car_ui_toolbar_tab_item
+layout car_ui_toolbar_tab_item_flexible
+layout car_ui_toolbar_tab_item_layout
+layout car_ui_toolbar_tab_item_layout_flexible
+layout car_ui_toolbar_two_row
+layout car_ui_two_action_preference
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3508,6 +4166,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout expand_button
+layout image_frame
 layout list_item
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3566,18 +4226,37 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout preference
+layout preference_category
+layout preference_category_material
+layout preference_dialog_edittext
+layout preference_dropdown
+layout preference_dropdown_material
+layout preference_information
+layout preference_information_material
+layout preference_list_fragment
+layout preference_material
+layout preference_recyclerview
+layout preference_widget_checkbox
+layout preference_widget_seekbar
+layout preference_widget_seekbar_material
+layout preference_widget_switch
+layout preference_widget_switch_compat
 layout recipe_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation mobile_navigation
 navigation nav_graph
 navigation nav_graph2
 navigation nav_graph3
 navigation nav_graph4
 plurals mtrl_badge_content_description
+raw car_ui_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3614,12 +4293,51 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string car_ui_alert_dialog_default_button
+string car_ui_dialog_preference_negative
+string car_ui_dialog_preference_positive
+string car_ui_ellipsis
+string car_ui_ime_wide_screen_system_property_name
+string car_ui_installer_process_name
+string car_ui_plugin_package_provider_authority_name
+string car_ui_preference_switch_off
+string car_ui_preference_switch_on
+string car_ui_restricted_while_driving
+string car_ui_scrollbar_component
+string car_ui_scrollbar_page_down_button
+string car_ui_scrollbar_page_up_button
+string car_ui_scrolling_limited_message
+string car_ui_toolbar_default_search_hint
+string car_ui_toolbar_menu_item_overflow_title
+string car_ui_toolbar_menu_item_search_title
+string car_ui_toolbar_menu_item_settings_title
+string car_ui_toolbar_nav_icon_content_description
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
+string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
+string copy
 string error_a11y_label
 string error_icon_content_description
+string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -3727,12 +4445,15 @@ string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string next
+string not_set
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string preference_copied
 string previous
+string recipe_image_description
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -3740,10 +4461,14 @@ string searchview_navigation_content_description
 string second_fragment_label
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
+string spoonacular_api_key
 string status_bar_notification_info_overflow
+string summary_collapsed_preference_list
 string title_activity_home
 string title_activity_pantry
 string title_activity_recipes
+string v7_preference_off
+string v7_preference_on
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -4025,6 +4750,7 @@ style Base_Widget_MaterialComponents_Snackbar
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
+style CarUiPreferenceTheme
 style CardView
 style CardView_Dark
 style CardView_Light
@@ -4062,6 +4788,57 @@ style Platform_V21_AppCompat_Light
 style Platform_V25_AppCompat
 style Platform_V25_AppCompat_Light
 style Platform_Widget_AppCompat_Spinner
+style Preference
+style Preference_CarUi
+style Preference_CarUi_Category
+style Preference_CarUi_CheckBoxPreference
+style Preference_CarUi_DialogPreference
+style Preference_CarUi_DialogPreference_EditTextPreference
+style Preference_CarUi_DialogSeekBarPreference
+style Preference_CarUi_DialogSeekBarPreference_LeftText
+style Preference_CarUi_DialogSeekBarPreference_RightText
+style Preference_CarUi_DialogSeekBarPreference_Seekbar
+style Preference_CarUi_DialogSeekBarPreference_TopText
+style Preference_CarUi_Divider
+style Preference_CarUi_DropDown
+style Preference_CarUi_Icon
+style Preference_CarUi_Information
+style Preference_CarUi_Preference
+style Preference_CarUi_PreferenceScreen
+style Preference_CarUi_SeekBarPreference
+style Preference_CarUi_SwitchPreference
+style Preference_Category
+style Preference_Category_Material
+style Preference_CheckBoxPreference
+style Preference_CheckBoxPreference_Material
+style Preference_DialogPreference
+style Preference_DialogPreference_EditTextPreference
+style Preference_DialogPreference_EditTextPreference_Material
+style Preference_DialogPreference_Material
+style Preference_DropDown
+style Preference_DropDown_Material
+style Preference_Information
+style Preference_Information_Material
+style Preference_Material
+style Preference_PreferenceScreen
+style Preference_PreferenceScreen_Material
+style Preference_SeekBarPreference
+style Preference_SeekBarPreference_Material
+style Preference_SwitchPreference
+style Preference_SwitchPreference_Material
+style Preference_SwitchPreferenceCompat
+style Preference_SwitchPreferenceCompat_Material
+style PreferenceCategoryTitleTextStyle
+style PreferenceFragment
+style PreferenceFragment_CarUi
+style PreferenceFragment_Material
+style PreferenceFragmentList
+style PreferenceFragmentList_CarUi
+style PreferenceFragmentList_Material
+style PreferenceSummaryTextStyle
+style PreferenceThemeOverlay
+style PreferenceThemeOverlay_v14
+style PreferenceThemeOverlay_v14_Material
 style RtlOverlay_DialogWindowTitle_AppCompat
 style RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
 style RtlOverlay_Widget_AppCompat_DialogTitle_Icon
@@ -4180,6 +4957,27 @@ style TextAppearance_AppCompat_Widget_PopupMenu_Large
 style TextAppearance_AppCompat_Widget_PopupMenu_Small
 style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
+style TextAppearance_CarUi
+style TextAppearance_CarUi_AlertDialog_Subtitle
+style TextAppearance_CarUi_AlertDialog_Title
+style TextAppearance_CarUi_Body1
+style TextAppearance_CarUi_Body2
+style TextAppearance_CarUi_Body3
+style TextAppearance_CarUi_ListItem
+style TextAppearance_CarUi_ListItem_Body
+style TextAppearance_CarUi_ListItem_Header
+style TextAppearance_CarUi_PreferenceCategoryTitle
+style TextAppearance_CarUi_PreferenceEditTextDialogMessage
+style TextAppearance_CarUi_PreferenceSummary
+style TextAppearance_CarUi_PreferenceTitle
+style TextAppearance_CarUi_Sub1
+style TextAppearance_CarUi_Sub2
+style TextAppearance_CarUi_Sub3
+style TextAppearance_CarUi_Widget
+style TextAppearance_CarUi_Widget_Toolbar
+style TextAppearance_CarUi_Widget_Toolbar_Tab
+style TextAppearance_CarUi_Widget_Toolbar_Tab_Selected
+style TextAppearance_CarUi_Widget_Toolbar_Title
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
@@ -4274,6 +5072,9 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
+style Theme_CarUi
+style Theme_CarUi_NoToolbar
+style Theme_CarUi_WithToolbar
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light
@@ -4542,6 +5343,39 @@ style Widget_AppCompat_TextView
 style Widget_AppCompat_TextView_SpinnerItem
 style Widget_AppCompat_Toolbar
 style Widget_AppCompat_Toolbar_Button_Navigation
+style Widget_CarUi
+style Widget_CarUi_AlertDialog
+style Widget_CarUi_AlertDialog_HeaderContainer
+style Widget_CarUi_AlertDialog_Icon
+style Widget_CarUi_AlertDialog_TitleContainer
+style Widget_CarUi_Button
+style Widget_CarUi_Button_Borderless_Colored
+style Widget_CarUi_CarUiRecyclerView
+style Widget_CarUi_SeekbarPreference
+style Widget_CarUi_SeekbarPreference_Seekbar
+style Widget_CarUi_Toolbar
+style Widget_CarUi_Toolbar_BottomView
+style Widget_CarUi_Toolbar_Container
+style Widget_CarUi_Toolbar_Logo
+style Widget_CarUi_Toolbar_LogoContainer
+style Widget_CarUi_Toolbar_MenuItem
+style Widget_CarUi_Toolbar_MenuItem_Container
+style Widget_CarUi_Toolbar_MenuItem_IndividualContainer
+style Widget_CarUi_Toolbar_NavIcon
+style Widget_CarUi_Toolbar_NavIconContainer
+style Widget_CarUi_Toolbar_ProgressBar
+style Widget_CarUi_Toolbar_Search_CloseIcon
+style Widget_CarUi_Toolbar_Search_EditText
+style Widget_CarUi_Toolbar_Search_SearchIcon
+style Widget_CarUi_Toolbar_SeparatorView
+style Widget_CarUi_Toolbar_Subtitle
+style Widget_CarUi_Toolbar_Tab
+style Widget_CarUi_Toolbar_Tab_Container
+style Widget_CarUi_Toolbar_Tab_Icon
+style Widget_CarUi_Toolbar_Tab_Text
+style Widget_CarUi_Toolbar_TextButton
+style Widget_CarUi_Toolbar_TextButton_WithIcon
+style Widget_CarUi_Toolbar_Title
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Design_AppBarLayout
@@ -4863,6 +5697,7 @@ styleable AppCompatSeekBar android_thumb tickMark tickMarkTint tickMarkTintMode
 styleable AppCompatTextHelper android_textAppearance android_drawableTop android_drawableBottom android_drawableLeft android_drawableRight android_drawableStart android_drawableEnd
 styleable AppCompatTextView android_textAppearance autoSizeMaxTextSize autoSizeMinTextSize autoSizePresetSizes autoSizeStepGranularity autoSizeTextType drawableBottomCompat drawableEndCompat drawableLeftCompat drawableRightCompat drawableStartCompat drawableTint drawableTintMode drawableTopCompat emojiCompatEnabled firstBaselineToTopHeight fontFamily fontVariationSettings lastBaselineToBottomHeight lineHeight textAllCaps textLocale
 styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle actionBarDivider actionBarItemBackground actionBarPopupTheme actionBarSize actionBarSplitStyle actionBarStyle actionBarTabBarStyle actionBarTabStyle actionBarTabTextStyle actionBarTheme actionBarWidgetTheme actionButtonStyle actionDropDownStyle actionMenuTextAppearance actionMenuTextColor actionModeBackground actionModeCloseButtonStyle actionModeCloseContentDescription actionModeCloseDrawable actionModeCopyDrawable actionModeCutDrawable actionModeFindDrawable actionModePasteDrawable actionModePopupWindowStyle actionModeSelectAllDrawable actionModeShareDrawable actionModeSplitBackground actionModeStyle actionModeTheme actionModeWebSearchDrawable actionOverflowButtonStyle actionOverflowMenuStyle activityChooserViewStyle alertDialogButtonGroupStyle alertDialogCenterButtons alertDialogStyle alertDialogTheme autoCompleteTextViewStyle borderlessButtonStyle buttonBarButtonStyle buttonBarNegativeButtonStyle buttonBarNeutralButtonStyle buttonBarPositiveButtonStyle buttonBarStyle buttonStyle buttonStyleSmall checkboxStyle checkedTextViewStyle colorAccent colorBackgroundFloating colorButtonNormal colorControlActivated colorControlHighlight colorControlNormal colorError colorPrimary colorPrimaryDark colorSwitchThumbNormal controlBackground dialogCornerRadius dialogPreferredPadding dialogTheme dividerHorizontal dividerVertical dropDownListViewStyle dropdownListPreferredItemHeight editTextBackground editTextColor editTextStyle homeAsUpIndicator imageButtonStyle listChoiceBackgroundIndicator listChoiceIndicatorMultipleAnimated listChoiceIndicatorSingleAnimated listDividerAlertDialog listMenuViewStyle listPopupWindowStyle listPreferredItemHeight listPreferredItemHeightLarge listPreferredItemHeightSmall listPreferredItemPaddingEnd listPreferredItemPaddingLeft listPreferredItemPaddingRight listPreferredItemPaddingStart panelBackground panelMenuListTheme panelMenuListWidth popupMenuStyle popupWindowStyle radioButtonStyle ratingBarStyle ratingBarStyleIndicator ratingBarStyleSmall searchViewStyle seekBarStyle selectableItemBackground selectableItemBackgroundBorderless spinnerDropDownItemStyle spinnerStyle switchStyle textAppearanceLargePopupMenu textAppearanceListItem textAppearanceListItemSecondary textAppearanceListItemSmall textAppearancePopupMenuHeader textAppearanceSearchResultSubtitle textAppearanceSearchResultTitle textAppearanceSmallPopupMenu textColorAlertDialogListItem textColorSearchUrl toolbarNavigationButtonStyle toolbarStyle tooltipForegroundColor tooltipFrameBackground viewInflaterClass windowActionBar windowActionBarOverlay windowActionModeOverlay windowFixedHeightMajor windowFixedHeightMinor windowFixedWidthMajor windowFixedWidthMinor windowMinWidthMajor windowMinWidthMinor windowNoTitle
+styleable BackgroundStyle android_selectableItemBackground selectableItemBackground
 styleable Badge backgroundColor badgeGravity badgeRadius badgeTextColor badgeWidePadding badgeWithTextRadius horizontalOffset horizontalOffsetWithText maxCharacterCount number verticalOffset verticalOffsetWithText
 styleable BaseProgressIndicator android_indeterminate hideAnimationBehavior indicatorColor minHideDelay showAnimationBehavior showDelay trackColor trackCornerRadius trackThickness
 styleable BottomAppBar addElevationShadow backgroundTint elevation fabAlignmentMode fabAlignmentModeEndMargin fabAnchorMode fabAnimationMode fabCradleMargin fabCradleRoundedCornerRadius fabCradleVerticalOffset hideOnScroll menuAlignmentMode navigationIconTint paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets removeEmbeddedFabElevation
@@ -4870,8 +5705,18 @@ styleable BottomNavigationView android_minHeight compatShadowEnabled itemHorizon
 styleable BottomSheetBehavior_Layout android_maxWidth android_maxHeight android_elevation backgroundTint behavior_draggable behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_significantVelocityThreshold behavior_skipCollapsed gestureInsetBottomIgnored marginLeftSystemWindowInsets marginRightSystemWindowInsets marginTopSystemWindowInsets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets shapeAppearance shapeAppearanceOverlay shouldRemoveExpandedCorners
 styleable ButtonBarLayout allowStacking
 styleable Capability queryPatterns shortcutMatchRequired
+styleable CarUi carUiActivity carUiBaseLayout carUiToolbar
+styleable CarUiPreference carUiClickableWhileDisabled carUiShowChevron car_ui_ux_restricted
+styleable CarUiRecyclerView android_orientation carUiSize enableDivider layoutManager layoutStyle numOfColumns reverseLayout rotaryScrollEnabled
+styleable CarUiToolbar logo menuItems searchHint showBackground showMenuItemsWhileSearching showTabsInSubpage title
+styleable CarUiToolbarMenuItem activatable activated carUiIcon checkable checked displayBehavior id onClick search settings showIconAndTitle tinted title uxRestrictions visible
+styleable CarUiTwoActionBasePreference android_layout android_widgetLayout carUiLayout widgetLayout
+styleable CarUiTwoActionIconPreference secondaryActionIcon
+styleable CarUiTwoActionPreference actionEnabled actionShown
+styleable CarUiTwoActionTextPreference secondaryActionStyle secondaryActionText
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carousel_firstView carousel_forwardTransition carousel_infinite carousel_nextState carousel_previousState carousel_touchUpMode carousel_touchUp_dampeningFactor carousel_touchUp_velocityThreshold
+styleable CheckBoxPreference android_summaryOn android_summaryOff android_disableDependentsState disableDependentsState summaryOff summaryOn
 styleable CheckedTextView android_checkMark checkMarkCompat checkMarkTint checkMarkTintMode
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
@@ -4892,13 +5737,16 @@ styleable CoordinatorLayout keylines statusBarBackground
 styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable CustomAttribute attributeName customBoolean customColorDrawableValue customColorValue customDimension customFloatValue customIntegerValue customPixelDimension customReference customStringValue methodName
 styleable DialogFragmentNavigator android_name
+styleable DialogPreference android_dialogTitle android_dialogMessage android_dialogIcon android_positiveButtonText android_negativeButtonText android_dialogLayout dialogIcon dialogLayout dialogMessage dialogTitle negativeButtonText positiveButtonText
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable DrawerLayout elevation
+styleable EditTextPreference useSimpleSummaryProvider
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec extendStrategy hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing
+styleable FocusParkingView shouldRestoreFocus
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
@@ -4907,6 +5755,7 @@ styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
+styleable IFocusArea bottomBoundOffset defaultFocus defaultFocusOverridesHistory endBoundOffset highlightPaddingBottom highlightPaddingEnd highlightPaddingHorizontal highlightPaddingStart highlightPaddingTop highlightPaddingVertical horizontalBoundOffset nudgeDown nudgeDownShortcut nudgeLeft nudgeLeftShortcut nudgeRight nudgeRightShortcut nudgeShortcut nudgeShortcutDirection nudgeUp nudgeUpShortcut startBoundOffset topBoundOffset verticalBoundOffset wrapAround
 styleable ImageFilterView altSrc blendSrc brightness contrast crossfade imagePanX imagePanY imageRotate imageZoom overlay round roundPercent saturation warmth
 styleable Insets marginLeftSystemWindowInsets marginRightSystemWindowInsets marginTopSystemWindowInsets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets
 styleable KeyAttribute android_alpha android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transformPivotTarget transitionEasing transitionPathRotate
@@ -4922,6 +5771,8 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
+styleable ListPreference android_entries android_entryValues entries entryValues useSimpleSummaryProvider
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType android_popupElevation simpleItemLayout simpleItemSelectedColor simpleItemSelectedRippleColor simpleItems
@@ -4951,6 +5802,7 @@ styleable MotionLabel android_textSize android_typeface android_textStyle androi
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
+styleable MultiSelectListPreference android_entries android_entryValues entries entryValues
 styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive popUpToSaveState restoreState
 styleable NavArgument android_name android_defaultValue argType nullable
 styleable NavDeepLink android_autoVerify action mimeType uri
@@ -4967,6 +5819,12 @@ styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
 styleable PopupWindowBackgroundState state_above_anchor
+styleable Preference android_icon android_persistent android_enabled android_layout android_title android_selectable android_key android_summary android_order android_widgetLayout android_dependency android_defaultValue android_shouldDisableView android_fragment android_singleLineTitle android_iconSpaceReserved allowDividerAbove allowDividerBelow defaultValue dependency enableCopying enabled fragment icon iconSpaceReserved isPreferenceVisible key layout order persistent selectable shouldDisableView singleLineTitle summary title widgetLayout
+styleable PreferenceFragment android_layout android_divider android_dividerHeight allowDividerAfterLastItem
+styleable PreferenceFragmentCompat android_layout android_divider android_dividerHeight allowDividerAfterLastItem
+styleable PreferenceGroup android_orderingFromXml initialExpandedChildrenCount orderingFromXml
+styleable PreferenceImageView android_maxWidth android_maxHeight maxHeight maxWidth
+styleable PreferenceTheme checkBoxPreferenceStyle dialogPreferenceStyle dropdownPreferenceStyle editTextPreferenceStyle preferenceCategoryStyle preferenceCategoryTitleTextAppearance preferenceFragmentCompatStyle preferenceFragmentListStyle preferenceFragmentStyle preferenceInformationStyle preferenceScreenStyle preferenceStyle preferenceTheme seekBarPreferenceStyle switchPreferenceCompatStyle switchPreferenceStyle
 styleable PropertySet android_visibility android_alpha layout_constraintTag motionProgress visibilityMode
 styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values
@@ -4976,9 +5834,11 @@ styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchBar android_textAppearance android_text android_hint defaultMarginsEnabled defaultScrollFlagsEnabled elevation forceDefaultNavigationOnClickListener hideNavigationIcon navigationIconTint strokeColor strokeWidth tintNavigationIcon
 styleable SearchView android_textAppearance android_focusable android_maxWidth android_text android_hint android_inputType android_imeOptions animateMenuItems animateNavigationIcon autoShowKeyboard closeIcon commitIcon defaultQueryHint goIcon headerLayout hideNavigationIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon searchPrefixText submitBackground suggestionRowLayout useDrawerArrowDrawable voiceIcon
+styleable SeekBarPreference android_layout android_max adjustable min seekBarIncrement showSeekBarValue updatesContinuously
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable SideSheetBehavior_Layout android_maxWidth android_maxHeight android_elevation backgroundTint behavior_draggable coplanarSiblingViewId shapeAppearance shapeAppearanceOverlay
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle minTouchTargetSize thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth shapeAppearance shapeAppearanceOverlay
@@ -4992,6 +5852,8 @@ styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
+styleable SwitchPreference android_summaryOn android_summaryOff android_disableDependentsState android_switchTextOn android_switchTextOff disableDependentsState summaryOff summaryOn switchTextOff switchTextOn
+styleable SwitchPreferenceCompat android_summaryOn android_summaryOff android_disableDependentsState android_switchTextOn android_switchTextOff disableDependentsState summaryOff summaryOn switchTextOff switchTextOn
 styleable TabItem android_icon android_layout android_text
 styleable TabLayout tabBackground tabContentStart tabGravity tabIconTint tabIconTintMode tabIndicator tabIndicatorAnimationDuration tabIndicatorAnimationMode tabIndicatorColor tabIndicatorFullWidth tabIndicatorGravity tabIndicatorHeight tabInlineLabel tabMaxWidth tabMinWidth tabMode tabPadding tabPaddingBottom tabPaddingEnd tabPaddingStart tabPaddingTop tabRippleColor tabSelectedTextAppearance tabSelectedTextColor tabTextAppearance tabTextColor tabUnboundedRipple
 styleable TextAppearance android_textSize android_typeface android_textStyle android_textColor android_textColorHint android_textColorLink android_shadowColor android_shadowDx android_shadowDy android_shadowRadius android_fontFamily android_textFontWeight fontFamily fontVariationSettings textAllCaps textLocale

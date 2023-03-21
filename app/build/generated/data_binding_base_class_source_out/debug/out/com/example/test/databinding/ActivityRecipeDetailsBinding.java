@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +18,10 @@ import java.lang.String;
 
 public final class ActivityRecipeDetailsBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final RelativeLayout rootView;
+
+  @NonNull
+  public final TextView recipeDescription;
 
   @NonNull
   public final ImageView recipeImage;
@@ -30,21 +33,27 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   public final TextView recipeInstructions;
 
   @NonNull
+  public final TextView recipeNutrition;
+
+  @NonNull
   public final TextView recipeTitle;
 
-  private ActivityRecipeDetailsBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageView recipeImage, @NonNull TextView recipeIngredients,
-      @NonNull TextView recipeInstructions, @NonNull TextView recipeTitle) {
+  private ActivityRecipeDetailsBinding(@NonNull RelativeLayout rootView,
+      @NonNull TextView recipeDescription, @NonNull ImageView recipeImage,
+      @NonNull TextView recipeIngredients, @NonNull TextView recipeInstructions,
+      @NonNull TextView recipeNutrition, @NonNull TextView recipeTitle) {
     this.rootView = rootView;
+    this.recipeDescription = recipeDescription;
     this.recipeImage = recipeImage;
     this.recipeIngredients = recipeIngredients;
     this.recipeInstructions = recipeInstructions;
+    this.recipeNutrition = recipeNutrition;
     this.recipeTitle = recipeTitle;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -69,6 +78,12 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.recipe_description;
+      TextView recipeDescription = ViewBindings.findChildViewById(rootView, id);
+      if (recipeDescription == null) {
+        break missingId;
+      }
+
       id = R.id.recipe_image;
       ImageView recipeImage = ViewBindings.findChildViewById(rootView, id);
       if (recipeImage == null) {
@@ -87,14 +102,20 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipe_nutrition;
+      TextView recipeNutrition = ViewBindings.findChildViewById(rootView, id);
+      if (recipeNutrition == null) {
+        break missingId;
+      }
+
       id = R.id.recipe_title;
       TextView recipeTitle = ViewBindings.findChildViewById(rootView, id);
       if (recipeTitle == null) {
         break missingId;
       }
 
-      return new ActivityRecipeDetailsBinding((LinearLayout) rootView, recipeImage,
-          recipeIngredients, recipeInstructions, recipeTitle);
+      return new ActivityRecipeDetailsBinding((RelativeLayout) rootView, recipeDescription,
+          recipeImage, recipeIngredients, recipeInstructions, recipeNutrition, recipeTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

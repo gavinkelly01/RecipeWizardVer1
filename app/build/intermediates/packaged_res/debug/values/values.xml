@@ -14,7 +14,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="recipe_image_description">Recipe Image</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="spoonacular_api_key">3bd64de960774274af7148c4123df14a</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_activity_pantry">PantryActivity</string>
     <string name="title_activity_recipes">RecipesActivity</string>

@@ -1,122 +1,166 @@
 [
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\navigation_nav_graph.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\navigation\\nav_graph.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_chicken_enchiladas_739fd129b4f3439293859ba87f263162.jpg.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\chicken_enchiladas_739fd129b4f3439293859ba87f263162.jpg"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_list_item.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\list_item.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_hearty_chicken_enchiladas_exps_thjj21_23761_b02_10_2b.jpg.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\hearty_chicken_enchiladas_exps_thjj21_23761_b02_10_2b.jpg"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_recipes.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_recipes.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\navigation_nav_graph3.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\navigation\\nav_graph3.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_recipesowneding.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_recipesowneding.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\navigation_nav_graph3.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\navigation\\nav_graph3.xml"
+        "merged": "com.example.test.app-merged_res-47:/layout_activity_recipe_details.xml.flat",
+        "source": "com.example.test.app-main-49:/layout/activity_recipe_details.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_download__1_.jpeg.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\download__1_.jpeg"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_activity_recipes.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_recipes.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\drawable_placeholder_image.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\drawable\\placeholder_image.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\mipmap-anydpi-v33\\ic_launcher.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.test.app-merged_res-42:/layout_activity_recipe_details.xml.flat",
-        "source": "com.example.test.app-main-44:/layout/activity_recipe_details.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\navigation_nav_graph4.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\navigation\\nav_graph4.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_recipe_item.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\recipe_item.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_placeholder_image.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\placeholder_image.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_activity_recipe_details.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_recipe_details.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_list_item.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\list_item.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_chicken_kiev_2_1_sq.jpg.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\chicken_kiev_2_1_sq.jpg"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_activity_home.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_home.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\navigation_nav_graph2.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\navigation\\nav_graph2.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_recipe_item.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\recipe_item.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-42:\\layout_activity_pantry.xml.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-44:\\layout\\activity_pantry.xml"
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_featuredrecipes.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_featuredrecipes.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_recipe_details.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_recipe_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\navigation_nav_graph2.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\navigation\\nav_graph2.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_roasted_garlic_and_herb_potato_wedges.jpg.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable\\roasted_garlic_and_herb_potato_wedges.jpg"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-anydpi-v33\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\navigation_nav_graph4.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\navigation\\nav_graph4.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_activity_pantry.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_pantry.xml"
     }
 ]
