@@ -46,6 +46,10 @@
             android:exported="true" >
         </activity>
         <activity
+            android:name="com.example.test.FeaturedRecipeDetailsActivity"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name="com.example.test.HomeActivity"
             android:exported="true" >
         </activity>
@@ -59,10 +63,6 @@
         </activity>
         <activity
             android:name="com.example.test.RegisterActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name="com.example.test.FeaturedRecipesActivity"
             android:exported="true" >
         </activity>
         <activity

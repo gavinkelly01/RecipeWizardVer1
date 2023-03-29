@@ -84,6 +84,5 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/edit_text"
-        app:layout_constraintVertical_bias="0.821"
-        android:onClick="openRecipesOwnedIngActivity"/>
+        app:layout_constraintVertical_bias="0.821" />
 </androidx.constraintlayout.widget.ConstraintLayout>

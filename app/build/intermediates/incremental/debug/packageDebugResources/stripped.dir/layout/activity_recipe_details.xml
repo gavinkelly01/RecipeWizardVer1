@@ -24,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
+                android:textColor="#000000"
                 android:text="Recipe Title"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -33,8 +34,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="Recipe Description"
-                android:textSize="16sp" />
+                android:textColor="#000000"
+                android:text="Recipe Ingredients:"
+                android:textStyle="bold"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/recipe_ingredients"
@@ -42,8 +45,20 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="Ingredients:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                 />
+
+            <TextView
+                android:id="@+id/recipe_instructions_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:text="Instructions:"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
 
             <TextView
                 android:id="@+id/recipe_instructions"
@@ -52,6 +67,15 @@
                 android:padding="16dp"
                 android:text="Instructions:"
                 android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/recipe_nutrition_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:padding="16dp"
+                android:text="Nutrition:"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView

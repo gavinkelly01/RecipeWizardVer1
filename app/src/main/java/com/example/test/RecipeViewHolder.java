@@ -11,8 +11,8 @@ import com.bumptech.glide.Glide;
 
 public class RecipeViewHolder extends RecyclerView.ViewHolder {
 
-    private ImageView recipeImage;
-    private TextView recipeTitle;
+    private final ImageView recipeImage;
+    private final TextView recipeTitle;
 
     public RecipeViewHolder(@NonNull View itemView) {
         super(itemView);

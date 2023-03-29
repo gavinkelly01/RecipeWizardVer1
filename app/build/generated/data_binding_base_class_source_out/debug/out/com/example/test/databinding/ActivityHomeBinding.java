@@ -6,11 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.test.R;
@@ -21,83 +20,33 @@ import java.lang.String;
 
 public final class ActivityHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final BottomNavigationView bottomNavigationHome;
 
   @NonNull
-  public final Button featuredButton1;
+  public final ImageView featuredRecipeImage;
 
   @NonNull
-  public final TextView featuredButton1Lbl;
+  public final Button randomRecipeButton;
 
   @NonNull
-  public final Button featuredButton2;
+  public final TextView recipeName;
 
-  @NonNull
-  public final Button featuredButton3;
-
-  @NonNull
-  public final ImageView featuredRecipes1Img;
-
-  @NonNull
-  public final ImageView featuredRecipes2Img;
-
-  @NonNull
-  public final TextView featuredRecipes2Lbl;
-
-  @NonNull
-  public final ImageView featuredRecipes3Img;
-
-  @NonNull
-  public final TextView featuredRecipes3Lbl;
-
-  @NonNull
-  public final TextView featuredRecipesLbl;
-
-  @NonNull
-  public final ConstraintLayout loginLayout;
-
-  @NonNull
-  public final BottomNavigationView navView;
-
-  @NonNull
-  public final RecyclerView recyclerView;
-
-  @NonNull
-  public final TextView textView;
-
-  private ActivityHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull BottomNavigationView bottomNavigationHome, @NonNull Button featuredButton1,
-      @NonNull TextView featuredButton1Lbl, @NonNull Button featuredButton2,
-      @NonNull Button featuredButton3, @NonNull ImageView featuredRecipes1Img,
-      @NonNull ImageView featuredRecipes2Img, @NonNull TextView featuredRecipes2Lbl,
-      @NonNull ImageView featuredRecipes3Img, @NonNull TextView featuredRecipes3Lbl,
-      @NonNull TextView featuredRecipesLbl, @NonNull ConstraintLayout loginLayout,
-      @NonNull BottomNavigationView navView, @NonNull RecyclerView recyclerView,
-      @NonNull TextView textView) {
+  private ActivityHomeBinding(@NonNull RelativeLayout rootView,
+      @NonNull BottomNavigationView bottomNavigationHome, @NonNull ImageView featuredRecipeImage,
+      @NonNull Button randomRecipeButton, @NonNull TextView recipeName) {
     this.rootView = rootView;
     this.bottomNavigationHome = bottomNavigationHome;
-    this.featuredButton1 = featuredButton1;
-    this.featuredButton1Lbl = featuredButton1Lbl;
-    this.featuredButton2 = featuredButton2;
-    this.featuredButton3 = featuredButton3;
-    this.featuredRecipes1Img = featuredRecipes1Img;
-    this.featuredRecipes2Img = featuredRecipes2Img;
-    this.featuredRecipes2Lbl = featuredRecipes2Lbl;
-    this.featuredRecipes3Img = featuredRecipes3Img;
-    this.featuredRecipes3Lbl = featuredRecipes3Lbl;
-    this.featuredRecipesLbl = featuredRecipesLbl;
-    this.loginLayout = loginLayout;
-    this.navView = navView;
-    this.recyclerView = recyclerView;
-    this.textView = textView;
+    this.featuredRecipeImage = featuredRecipeImage;
+    this.randomRecipeButton = randomRecipeButton;
+    this.recipeName = recipeName;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -128,90 +77,26 @@ public final class ActivityHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.featuredButton1;
-      Button featuredButton1 = ViewBindings.findChildViewById(rootView, id);
-      if (featuredButton1 == null) {
+      id = R.id.featured_recipe_image;
+      ImageView featuredRecipeImage = ViewBindings.findChildViewById(rootView, id);
+      if (featuredRecipeImage == null) {
         break missingId;
       }
 
-      id = R.id.featuredButton1Lbl;
-      TextView featuredButton1Lbl = ViewBindings.findChildViewById(rootView, id);
-      if (featuredButton1Lbl == null) {
+      id = R.id.random_recipe_button;
+      Button randomRecipeButton = ViewBindings.findChildViewById(rootView, id);
+      if (randomRecipeButton == null) {
         break missingId;
       }
 
-      id = R.id.featuredButton2;
-      Button featuredButton2 = ViewBindings.findChildViewById(rootView, id);
-      if (featuredButton2 == null) {
+      id = R.id.recipe_name;
+      TextView recipeName = ViewBindings.findChildViewById(rootView, id);
+      if (recipeName == null) {
         break missingId;
       }
 
-      id = R.id.featuredButton3;
-      Button featuredButton3 = ViewBindings.findChildViewById(rootView, id);
-      if (featuredButton3 == null) {
-        break missingId;
-      }
-
-      id = R.id.featuredRecipes1Img;
-      ImageView featuredRecipes1Img = ViewBindings.findChildViewById(rootView, id);
-      if (featuredRecipes1Img == null) {
-        break missingId;
-      }
-
-      id = R.id.featuredRecipes2Img;
-      ImageView featuredRecipes2Img = ViewBindings.findChildViewById(rootView, id);
-      if (featuredRecipes2Img == null) {
-        break missingId;
-      }
-
-      id = R.id.featuredRecipes2Lbl;
-      TextView featuredRecipes2Lbl = ViewBindings.findChildViewById(rootView, id);
-      if (featuredRecipes2Lbl == null) {
-        break missingId;
-      }
-
-      id = R.id.featuredRecipes3Img;
-      ImageView featuredRecipes3Img = ViewBindings.findChildViewById(rootView, id);
-      if (featuredRecipes3Img == null) {
-        break missingId;
-      }
-
-      id = R.id.featuredRecipes3Lbl;
-      TextView featuredRecipes3Lbl = ViewBindings.findChildViewById(rootView, id);
-      if (featuredRecipes3Lbl == null) {
-        break missingId;
-      }
-
-      id = R.id.featuredRecipesLbl;
-      TextView featuredRecipesLbl = ViewBindings.findChildViewById(rootView, id);
-      if (featuredRecipesLbl == null) {
-        break missingId;
-      }
-
-      ConstraintLayout loginLayout = (ConstraintLayout) rootView;
-
-      id = R.id.nav_view;
-      BottomNavigationView navView = ViewBindings.findChildViewById(rootView, id);
-      if (navView == null) {
-        break missingId;
-      }
-
-      id = R.id.recycler_view;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
-        break missingId;
-      }
-
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
-        break missingId;
-      }
-
-      return new ActivityHomeBinding((ConstraintLayout) rootView, bottomNavigationHome,
-          featuredButton1, featuredButton1Lbl, featuredButton2, featuredButton3,
-          featuredRecipes1Img, featuredRecipes2Img, featuredRecipes2Lbl, featuredRecipes3Img,
-          featuredRecipes3Lbl, featuredRecipesLbl, loginLayout, navView, recyclerView, textView);
+      return new ActivityHomeBinding((RelativeLayout) rootView, bottomNavigationHome,
+          featuredRecipeImage, randomRecipeButton, recipeName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,10 +14,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PantryActivity extends AppCompatActivity {
     private EditText editText;
@@ -25,6 +31,9 @@ public class PantryActivity extends AppCompatActivity {
     private ArrayList<Ingredient> ingredients;
     private ArrayAdapter<Ingredient> adapter;
     private BottomNavigationView bottomNavMenu;
+    private SharedPreferences sharedPreferences;
+    private Gson gson;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +58,6 @@ public class PantryActivity extends AppCompatActivity {
                                 startActivity(homeIntent);
                                 return true;
                             case R.id.navigation_pantry:
-                                Intent pantryIntent = new Intent(PantryActivity.this, PantryActivity.class);
-                                startActivity(pantryIntent);
                                 return true;
                             case R.id.navigation_recipes:
                                 Intent recipesIntent = new Intent(PantryActivity.this, RecipesActivity.class);
@@ -61,6 +68,20 @@ public class PantryActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+        // Initialize shared preferences and Gson instance
+        sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
+        gson = new Gson();
+
+        // Load ingredients from shared preferences
+        String ingredientsJson = sharedPreferences.getString("ingredients", null);
+        if (ingredientsJson != null) {
+            Type type = new TypeToken<List<Ingredient>>(){}.getType();
+            List<Ingredient> savedIngredients = gson.fromJson(ingredientsJson, type);
+            ingredients.addAll(savedIngredients);
+            adapter.notifyDataSetChanged();
+        }
+
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +91,14 @@ public class PantryActivity extends AppCompatActivity {
                     ingredients.add(ingredient);
                     adapter.notifyDataSetChanged();
                     editText.setText("");
+
+                    // Save ingredients to shared preferences
+                    String ingredientsJson = gson.toJson(ingredients);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("ingredients", ingredientsJson);
+                    editor.apply();
+
+                    Toast.makeText(PantryActivity.this, "Ingredient added to pantry", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -78,12 +107,16 @@ public class PantryActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ingredients.remove(position);
                 adapter.notifyDataSetChanged();
+
+                // Save ingredients to shared preferences
+                String ingredientsJson = gson.toJson(ingredients);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("ingredients", ingredientsJson);
+                editor.apply();
+
+                Toast.makeText(PantryActivity.this, "Ingredient removed from pantry", Toast.LENGTH_SHORT).show();
             }
         });
+    }
 
-    }
-    public void openRecipesOwnedIngActivity(View view) {
-        Intent intent = new Intent(this, RecipesOwnedIngActivity.class);
-        startActivity(intent);
-    }
 }

@@ -21,9 +21,9 @@ import com.android.volley.toolbox.Volley;
 import java.util.List;
 
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder> {
-    private List<Recipe> recipes;
-    private Context context;
-    private ImageLoader imageLoader;
+    private final List<Recipe> recipes;
+    private final Context context;
+    private final ImageLoader imageLoader;
     private OnRecipeClickListener onRecipeClickListener;
 
     public RecipeAdapter(List<Recipe> recipes, Context context) {

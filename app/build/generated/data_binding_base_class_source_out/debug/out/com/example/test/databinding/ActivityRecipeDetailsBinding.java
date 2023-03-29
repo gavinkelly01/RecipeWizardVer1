@@ -33,7 +33,13 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   public final TextView recipeInstructions;
 
   @NonNull
+  public final TextView recipeInstructionsHeader;
+
+  @NonNull
   public final TextView recipeNutrition;
+
+  @NonNull
+  public final TextView recipeNutritionLabel;
 
   @NonNull
   public final TextView recipeTitle;
@@ -41,13 +47,16 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   private ActivityRecipeDetailsBinding(@NonNull RelativeLayout rootView,
       @NonNull TextView recipeDescription, @NonNull ImageView recipeImage,
       @NonNull TextView recipeIngredients, @NonNull TextView recipeInstructions,
-      @NonNull TextView recipeNutrition, @NonNull TextView recipeTitle) {
+      @NonNull TextView recipeInstructionsHeader, @NonNull TextView recipeNutrition,
+      @NonNull TextView recipeNutritionLabel, @NonNull TextView recipeTitle) {
     this.rootView = rootView;
     this.recipeDescription = recipeDescription;
     this.recipeImage = recipeImage;
     this.recipeIngredients = recipeIngredients;
     this.recipeInstructions = recipeInstructions;
+    this.recipeInstructionsHeader = recipeInstructionsHeader;
     this.recipeNutrition = recipeNutrition;
+    this.recipeNutritionLabel = recipeNutritionLabel;
     this.recipeTitle = recipeTitle;
   }
 
@@ -102,9 +111,21 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipe_instructions_header;
+      TextView recipeInstructionsHeader = ViewBindings.findChildViewById(rootView, id);
+      if (recipeInstructionsHeader == null) {
+        break missingId;
+      }
+
       id = R.id.recipe_nutrition;
       TextView recipeNutrition = ViewBindings.findChildViewById(rootView, id);
       if (recipeNutrition == null) {
+        break missingId;
+      }
+
+      id = R.id.recipe_nutrition_label;
+      TextView recipeNutritionLabel = ViewBindings.findChildViewById(rootView, id);
+      if (recipeNutritionLabel == null) {
         break missingId;
       }
 
@@ -115,7 +136,8 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
       }
 
       return new ActivityRecipeDetailsBinding((RelativeLayout) rootView, recipeDescription,
-          recipeImage, recipeIngredients, recipeInstructions, recipeNutrition, recipeTitle);
+          recipeImage, recipeIngredients, recipeInstructions, recipeInstructionsHeader,
+          recipeNutrition, recipeNutritionLabel, recipeTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

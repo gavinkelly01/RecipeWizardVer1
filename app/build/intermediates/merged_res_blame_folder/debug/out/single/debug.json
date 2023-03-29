@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\drawable_chicken_enchiladas_739fd129b4f3439293859ba87f263162.jpg.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\layout_item_ingredient.xml.flat",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\item_ingredient.xml"
     },
     {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-merged_res-47:\\xml_data_extraction_rules.xml.flat",

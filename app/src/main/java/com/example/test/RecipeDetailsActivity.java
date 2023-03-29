@@ -1,38 +1,24 @@
 package com.example.test;
 
-import android.graphics.Bitmap;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
-import com.google.gson.JsonObject;
-import com.squareup.picasso.Picasso;
-
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class RecipeDetailsActivity extends AppCompatActivity {
 
@@ -41,7 +27,10 @@ public class RecipeDetailsActivity extends AppCompatActivity {
     private ImageView imageView;
     private TextView ingredientsTextView;
     private TextView instructionsTextView;
+    private TextView nutritionTextView;
     private Recipe recipe;
+    private ArrayList<Ingredient> pantryIngredients;
+    private Gson gson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +39,7 @@ public class RecipeDetailsActivity extends AppCompatActivity {
 
         recipe = (Recipe) getIntent().getSerializableExtra("recipe");
         if (recipe == null) {
-               finish();
+            finish();
             return;
         }
 
@@ -59,9 +48,22 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         ingredientsTextView = findViewById(R.id.recipe_ingredients);
         instructionsTextView = findViewById(R.id.recipe_instructions);
 
+        // Load pantry ingredients from shared preferences
+        SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
+        gson = new Gson();
+        String pantryIngredientsJson = sharedPreferences.getString("ingredients", null);
+        if (pantryIngredientsJson != null) {
+            Type type = new TypeToken<List<Ingredient>>() {
+            }.getType();
+            List<Ingredient> savedPantryIngredients = gson.fromJson(pantryIngredientsJson, type);
+            pantryIngredients = new ArrayList<>(savedPantryIngredients);
+        } else {
+            pantryIngredients = new ArrayList<>();
+        }
+
         int recipeId = recipe.getId();
 
-        String url = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=" + API_KEY;
+        String url = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=" + API_KEY + "&includeNutrition=true";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
@@ -69,7 +71,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                     try {
                         String title = response.getString("title");
                         String imageUrl = response.getString("image");
-
                         JSONArray ingredients = response.getJSONArray("extendedIngredients");
                         StringBuilder ingredientsText = new StringBuilder();
                         for (int i = 0; i < ingredients.length(); i++) {
@@ -78,7 +79,22 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                             double amount = ingredient.getDouble("amount");
                             String unit = ingredient.getString("unit");
                             String ingredientText = String.format("%.1f %s %s", amount, unit, ingredientName);
-                            ingredientsText.append(ingredientText).append("\n");
+
+                            // Check if the ingredient contains the pantry ingredient name
+                            boolean isFoundInPantry = false;
+                            for (Ingredient pantryIngredient : pantryIngredients) {
+                                if (ingredientName.toLowerCase().contains(pantryIngredient.getName().toLowerCase())) {
+                                    isFoundInPantry = true;
+                                    break;
+                                }
+                            }
+
+                            // Highlight pantry ingredients in the ingredient list
+                            if (isFoundInPantry) {
+                                ingredientsText.append("<b>").append(ingredientText).append("</b><br>");
+                            } else {
+                                ingredientsText.append(ingredientText).append("<br>");
+                            }
                         }
 
                         JSONArray instructions = response.getJSONArray("analyzedInstructions")
@@ -87,29 +103,39 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                         StringBuilder instructionsText = new StringBuilder();
                         for (int i = 0; i < instructions.length(); i++) {
                             JSONObject step = instructions.getJSONObject(i);
-                            String stepText = step.getString("step");
-                            instructionsText.append(i + 1).append(". ").append(stepText).append("\n\n");
+                            int stepNumber = step.getInt("number");
+                            String instruction = step.getString("step");
+                            instructionsText.append("").append(stepNumber).append(". ").append(instruction).append("<br>");
+
+                            // Highlight pantry ingredients in the instructions
+                            for (Ingredient pantryIngredient : pantryIngredients) {
+                                String ingredientName = pantryIngredient.getName().toLowerCase();
+                                if (instruction.toLowerCase().contains(ingredientName.toLowerCase())) {
+                                    instruction = instruction.replaceAll("(?i)" + ingredientName, "<b>" + ingredientName + "</b>");
+                                }
+                            }
+                            instructionsText.append(instruction).append("<br>");
                         }
 
-                        Glide.with(this)
-                                .load(imageUrl)
-                                .placeholder(R.drawable.ic_launcher_background)
-                                .error(R.drawable.ic_launcher_background)
-                                .into(imageView);
+                        String ingredientsString = ingredientsText.toString();
+                        String instructionsString = instructionsText.toString();
 
-                        titleTextView.setText(title);
-                        ingredientsTextView.setText(ingredientsText.toString());
-                        instructionsTextView.setText(instructionsText.toString());
+                        runOnUiThread(() -> {
+                            titleTextView.setText(title);
+                            Glide.with(this).load(imageUrl).into(imageView);
+                            ingredientsTextView.setText(Html.fromHtml(ingredientsString));
+                            instructionsTextView.setText(Html.fromHtml(instructionsString));
+                        });
+
                     } catch (JSONException e) {
                         e.printStackTrace();
-                          finish();
                     }
+
                 },
                 error -> {
-                    error.printStackTrace();
-
-                     finish();
+                    Toast.makeText(this, "Error retrieving recipe details", Toast.LENGTH_SHORT).show();
                 });
         queue.add(jsonObjectRequest);
     }
+
 }

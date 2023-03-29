@@ -33,7 +33,7 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
     private SearchView searchView;
     private BottomNavigationView bottomNavMenu;
     private RecipeAdapter recipeAdapter;
-    private List<Recipe> recipes = new ArrayList<>();
+    private final List<Recipe> recipes = new ArrayList<>();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -100,7 +100,7 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
                             JSONObject result = results.getJSONObject(i);
                             int id = result.getInt("id");
                             String title = result.getString("title");
-                            String imageUrl = "https://spoonacular.com/recipeImages/" + id + "-90x90.jpg";
+                            String imageUrl = "https://spoonacular.com/recipeImages/" + id + "-240x240.jpg";
 
                             // Get recipe details
                             List<String> instructions = new ArrayList<>();

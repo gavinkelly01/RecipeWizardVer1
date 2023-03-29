@@ -40,7 +40,7 @@
 25-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 26
 27    <application
-27-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:5:5-53:19
+27-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:5:5-52:19
 28        android:allowBackup="true"
 28-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:6:9-35
 29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -77,62 +77,62 @@
 46-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:19:13-36
 47        </activity>
 48        <activity
-48-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:21:9-24:20
-49            android:name="com.example.test.HomeActivity"
-49-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:22:13-41
+48-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:21:9-23:20
+49            android:name="com.example.test.FeaturedRecipeDetailsActivity"
+49-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:21:19-64
 50            android:exported="true" >
-50-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:23:13-36
+50-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:22:13-36
 51        </activity>
 52        <activity
-52-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:25:12-27:20
-53            android:name="com.example.test.PantryActivity"
-53-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:25:22-52
+52-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:24:9-27:20
+53            android:name="com.example.test.HomeActivity"
+53-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:25:13-41
 54            android:exported="true" >
 54-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:26:13-36
 55        </activity>
 56        <activity
-56-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:28:9-31:20
-57            android:name="com.example.test.LoginActivity"
-57-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:29:13-42
+56-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:28:12-30:20
+57            android:name="com.example.test.PantryActivity"
+57-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:28:22-52
 58            android:exported="true" >
-58-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:30:13-36
+58-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:29:13-36
 59        </activity>
 60        <activity
-60-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:32:9-35:20
-61            android:name="com.example.test.RegisterActivity"
-61-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:33:13-45
+60-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:31:9-34:20
+61            android:name="com.example.test.LoginActivity"
+61-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:32:13-42
 62            android:exported="true" >
-62-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:34:13-36
+62-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:33:13-36
 63        </activity>
 64        <activity
-64-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:36:9-39:20
-65            android:name="com.example.test.FeaturedRecipesActivity"
-65-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:37:13-52
+64-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:35:9-38:20
+65            android:name="com.example.test.RegisterActivity"
+65-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:36:13-45
 66            android:exported="true" >
-66-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:38:13-36
+66-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:37:13-36
 67        </activity>
 68        <activity
-68-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:40:9-43:20
+68-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:39:9-42:20
 69            android:name="com.example.test.RecipesOwnedIngActivity"
-69-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:41:13-52
+69-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:40:13-52
 70            android:exported="true" >
-70-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:42:13-36
+70-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:41:13-36
 71        </activity>
 72        <activity
-72-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:44:9-52:20
+72-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:43:9-51:20
 73            android:name="com.example.test.MainActivity"
-73-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:45:13-41
+73-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:44:13-41
 74            android:exported="true" >
-74-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:46:13-36
+74-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:45:13-36
 75            <intent-filter>
-75-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:47:13-51:29
+75-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:46:13-50:29
 76                <action android:name="android.intent.action.MAIN" />
-76-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:48:17-69
-76-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:48:25-66
+76-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:47:17-69
+76-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:47:25-66
 77
 78                <category android:name="android.intent.category.LAUNCHER" />
-78-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:50:17-77
-78-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:50:27-74
+78-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:49:17-77
+78-->C:\Users\gavin\AndroidStudioProjects\Test2\app\src\main\AndroidManifest.xml:49:27-74
 79            </intent-filter>
 80        </activity>
 81

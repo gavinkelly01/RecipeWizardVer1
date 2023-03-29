@@ -25,6 +25,9 @@ public class Recipe implements Serializable {
         this.nutrition = nutrition;
     }
 
+    public Recipe(int id, String title, String imageUrl) {
+    }
+
     public int getId() {
         return id;
     }

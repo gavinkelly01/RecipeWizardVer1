@@ -8,12 +8,12 @@
         "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\list_item.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\list_item.xml"
-    },
-    {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\activity_pantry.xml",
         "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_pantry.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\list_item.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\list_item.xml"
     },
     {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\activity_recipe_details.xml",
@@ -22,6 +22,10 @@
     {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\activity_register.xml",
         "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\item_ingredient.xml",
+        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-49:\\layout\\item_ingredient.xml"
     },
     {
         "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-46:\\layout\\activity_recipesowneding.xml",

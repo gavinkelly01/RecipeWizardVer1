@@ -18,6 +18,9 @@
         <activity android:name=".RecipeDetailsActivity"
             android:exported="true">
         </activity>
+        <activity android:name=".FeaturedRecipeDetailsActivity"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".HomeActivity"
             android:exported="true" >
@@ -31,10 +34,6 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name=".FeaturedRecipesActivity"
             android:exported="true" >
         </activity>
         <activity
