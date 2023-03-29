@@ -1,8 +1,6 @@
 package com.example.test;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,31 +10,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.bumptech.glide.Glide;
-import com.example.test.Ingredient;
-import com.example.test.R;
-import com.example.test.Recipe;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 public class FeaturedRecipeDetailsActivity extends AppCompatActivity {
 
-    private static final String API_KEY = "3bd64de960774274af7148c4123df14a";
+    private static final String API_KEY = "56f3fc3c51b7482c8fa50e5a1b6c61b1";
     private TextView titleTextView;
     private ImageView imageView;
     private TextView ingredientsTextView;
     private TextView instructionsTextView;
     private TextView nutritionTextView;
     private Recipe recipe;
+    private BottomNavigationView bottomNavMenu;
     private ArrayList<Ingredient> pantryIngredients;
     private Gson gson;
 
@@ -44,6 +37,9 @@ public class FeaturedRecipeDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_details);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_chefhat);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         int recipeId = getIntent().getIntExtra("recipeId", -1);
         if (recipeId == -1) {
@@ -57,7 +53,6 @@ public class FeaturedRecipeDetailsActivity extends AppCompatActivity {
         instructionsTextView = findViewById(R.id.recipe_instructions);
         nutritionTextView = findViewById(R.id.recipe_nutrition);
 
-        // Fetch recipe details from the API using recipeId
         String url = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=" + API_KEY + "&includeNutrition=true";
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
@@ -87,14 +82,9 @@ public class FeaturedRecipeDetailsActivity extends AppCompatActivity {
                             instructionsText.append(String.format("%d. %s\n", stepNumber, stepText));
                         }
                         instructionsTextView.setText(instructionsText.toString());
-
-                        // Set the title
                         titleTextView.setText(title);
-
-                        // Load the image
                         Picasso.get().load(imageUrl).into(imageView);
 
-                        // Get and display nutritional information
                         JSONObject nutrition = response.getJSONObject("nutrition");
                         JSONArray nutrients = nutrition.getJSONArray("nutrients");
                         StringBuilder nutritionText = new StringBuilder();

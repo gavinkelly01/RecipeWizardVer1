@@ -22,7 +22,8 @@ import java.util.List;
 
 public class RecipeDetailsActivity extends AppCompatActivity {
 
-    private static final String API_KEY = "3bd64de960774274af7148c4123df14a";
+    public static final String EXTRA_RECIPE = "com.example.test.RECIPE";
+    private static final String API_KEY = "56f3fc3c51b7482c8fa50e5a1b6c61b1";
     private TextView titleTextView;
     private ImageView imageView;
     private TextView ingredientsTextView;
@@ -36,6 +37,9 @@ public class RecipeDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe_details);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_chefhat);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         recipe = (Recipe) getIntent().getSerializableExtra("recipe");
         if (recipe == null) {
@@ -47,6 +51,7 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         imageView = findViewById(R.id.recipe_image);
         ingredientsTextView = findViewById(R.id.recipe_ingredients);
         instructionsTextView = findViewById(R.id.recipe_instructions);
+        nutritionTextView = findViewById(R.id.recipe_nutrition);
 
         // Load pantry ingredients from shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
@@ -106,7 +111,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                             int stepNumber = step.getInt("number");
                             String instruction = step.getString("step");
                             instructionsText.append("").append(stepNumber).append(". ").append(instruction).append("<br>");
-
                             // Highlight pantry ingredients in the instructions
                             for (Ingredient pantryIngredient : pantryIngredients) {
                                 String ingredientName = pantryIngredient.getName().toLowerCase();
@@ -117,14 +121,27 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                             instructionsText.append(instruction).append("<br>");
                         }
 
+                        JSONArray nutrients = response.getJSONObject("nutrition").getJSONArray("nutrients");
+                        StringBuilder nutritionText = new StringBuilder();
+                        for (int i = 0; i < nutrients.length(); i++) {
+                            JSONObject nutrient = nutrients.getJSONObject(i);
+                            String name = nutrient.getString("name");
+                            double amount = nutrient.getDouble("amount");
+                            String unit = nutrient.getString("unit");
+                            String nutrientText = String.format("%s: %.1f %s<br>", name, amount, unit);
+                            nutritionText.append(nutrientText);
+                        }
+
                         String ingredientsString = ingredientsText.toString();
                         String instructionsString = instructionsText.toString();
+                        String nutritionString = nutritionText.toString();
 
                         runOnUiThread(() -> {
                             titleTextView.setText(title);
                             Glide.with(this).load(imageUrl).into(imageView);
                             ingredientsTextView.setText(Html.fromHtml(ingredientsString));
                             instructionsTextView.setText(Html.fromHtml(instructionsString));
+                            nutritionTextView.setText(Html.fromHtml(nutritionString));
                         });
 
                     } catch (JSONException e) {
@@ -137,5 +154,4 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                 });
         queue.add(jsonObjectRequest);
     }
-
 }

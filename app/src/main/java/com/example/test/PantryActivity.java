@@ -39,6 +39,9 @@ public class PantryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantry);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_chefhat);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         editText = findViewById(R.id.edit_text);
         addButton = findViewById(R.id.add_button);
@@ -69,11 +72,11 @@ public class PantryActivity extends AppCompatActivity {
                     }
                 });
 
-        // Initialize shared preferences and Gson instance
+        bottomNavMenu.getMenu().findItem(R.id.navigation_pantry).setChecked(true);
+
         sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
         gson = new Gson();
 
-        // Load ingredients from shared preferences
         String ingredientsJson = sharedPreferences.getString("ingredients", null);
         if (ingredientsJson != null) {
             Type type = new TypeToken<List<Ingredient>>(){}.getType();
@@ -92,7 +95,6 @@ public class PantryActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     editText.setText("");
 
-                    // Save ingredients to shared preferences
                     String ingredientsJson = gson.toJson(ingredients);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("ingredients", ingredientsJson);
@@ -102,13 +104,27 @@ public class PantryActivity extends AppCompatActivity {
                 }
             }
         });
+
+        Button recipesButton = findViewById(R.id.recipes_button);
+        recipesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ingredientsJson = sharedPreferences.getString("ingredients", null);
+                Type type = new TypeToken<List<Ingredient>>(){}.getType();
+                List<Ingredient> savedIngredients = gson.fromJson(ingredientsJson, type);
+
+                Intent intent = new Intent(PantryActivity.this, RecipeSuggestionsActivity.class);
+                intent.putExtra("ingredients", gson.toJson(savedIngredients));
+                startActivity(intent);
+            }
+        });
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ingredients.remove(position);
                 adapter.notifyDataSetChanged();
 
-                // Save ingredients to shared preferences
                 String ingredientsJson = gson.toJson(ingredients);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("ingredients", ingredientsJson);

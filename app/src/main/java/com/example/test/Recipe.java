@@ -1,8 +1,5 @@
 package com.example.test;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -44,6 +41,7 @@ public class Recipe implements Serializable {
         this.title = title;
     }
 
+
     public String getImageUrl() {
         return imageUrl;
     }
@@ -74,5 +72,10 @@ public class Recipe implements Serializable {
 
     public void setNutrition(Map<String, String> nutrition) {
         this.nutrition = nutrition;
+    }
+
+
+    public boolean hasAllIngredients(List<String> pantryIngredients) {
+        return false;
     }
 }

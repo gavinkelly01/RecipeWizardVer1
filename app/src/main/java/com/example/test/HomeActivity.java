@@ -27,12 +27,15 @@ public class HomeActivity extends AppCompatActivity {
     private TextView recipeName;
     private Button viewRecipeButton;
     private Gson gson;
-    private static final String API_KEY = "3bd64de960774274af7148c4123df14a";
+    private static final String API_KEY = "56f3fc3c51b7482c8fa50e5a1b6c61b1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_chefhat);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         bottomNavMenu = findViewById(R.id.bottom_navigation_home);
         recipeImage = findViewById(R.id.featured_recipe_image);
@@ -61,6 +64,9 @@ public class HomeActivity extends AppCompatActivity {
                         }
                     }
                 });
+        // Set the Home item as checked by default
+        bottomNavMenu.getMenu().findItem(R.id.navigation_home).setChecked(true);
+
 
         viewRecipeButton.setOnClickListener(new View.OnClickListener() {
             @Override

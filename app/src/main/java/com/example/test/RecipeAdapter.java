@@ -25,6 +25,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     private final Context context;
     private final ImageLoader imageLoader;
     private OnRecipeClickListener onRecipeClickListener;
+    private OnItemClickListener listener;
 
     public RecipeAdapter(List<Recipe> recipes, Context context) {
         this.recipes = recipes;
@@ -87,8 +88,18 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         this.onRecipeClickListener = listener;
     }
 
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
+
     public interface OnRecipeClickListener {
         void onRecipeClick(Recipe recipe);
+
+        void onRecipeClick(int position);
     }
 
     static class RecipeViewHolder extends RecyclerView.ViewHolder {

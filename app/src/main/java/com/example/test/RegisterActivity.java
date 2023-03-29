@@ -1,20 +1,16 @@
 package com.example.test;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,20 +20,23 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mPasswordEditText;
     private Button mRegisterButton;
     private Pattern mEmailPattern;
+    private TextView mLoginTextView;
+    private SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        // Initialize Firebase
-        FirebaseApp.initializeApp(this);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_chefhat);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         mEmailEditText = findViewById(R.id.register_email);
         mPasswordEditText = findViewById(R.id.register_password);
         mRegisterButton = findViewById(R.id.register_button);
 
         mEmailPattern = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+        mSharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,28 +46,31 @@ public class RegisterActivity extends AppCompatActivity {
 
                 Matcher matcher = mEmailPattern.matcher(email);
                 if (matcher.matches()) {
-                    // Email is valid, proceed to sign-up with Firebase
-                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        // Sign-up successful, proceed to main activity
-                                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    } else {
-                                        // Sign-up failed, display error message
-                                        Toast.makeText(RegisterActivity.this, "Sign-up failed. Please try again.", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    SharedPreferences.Editor editor = mSharedPreferences.edit();
+                    editor.putString("email", email);
+                    editor.putString("password", password);
+                    editor.apply();
+
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 } else {
-                    // Email is invalid, display error message
                     Toast.makeText(RegisterActivity.this, "Invalid email. Please enter a valid email address.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+        View mloginTextView = findViewById(R.id.register_login_text);
+
+        mloginTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(loginIntent);
+            }
+        });
     }
 }
+
+    
 

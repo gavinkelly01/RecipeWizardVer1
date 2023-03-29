@@ -16,7 +16,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
+import com.example.test.Recipe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,7 +28,7 @@ import java.util.Map;
 
 public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
 
-    private static final String API_KEY = "3bd64de960774274af7148c4123df14a";
+    private static final String API_KEY = "56f3fc3c51b7482c8fa50e5a1b6c61b1";
     private RecyclerView recyclerView;
     private SearchView searchView;
     private BottomNavigationView bottomNavMenu;
@@ -40,6 +40,9 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipes);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.ic_chefhat);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         recyclerView = findViewById(R.id.recycler_view);
         searchView = findViewById(R.id.search_view);
@@ -110,7 +113,34 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
                             recipes.add(new Recipe(id, title, imageUrl, instructions, ingredients, nutrition));
                         }
                         recipeAdapter.notifyDataSetChanged();
-                       } catch (JSONException e) {
+                        for (Recipe recipe : recipes) {
+                            String nutritionUrl = "https://api.spoonacular.com/recipes/" + recipe.getId() + "/nutritionWidget.json?apiKey=" + API_KEY;
+                            JsonObjectRequest nutritionJsonObjectRequest = new JsonObjectRequest(nutritionUrl, null,
+                                    nutritionResponse -> {
+                                        try {
+                                            JSONArray nutrients = nutritionResponse.getJSONArray("nutrients");
+                                            Map<String, String> nutritionData = new HashMap<>();
+                                            for (int j = 0; j < nutrients.length(); j++) {
+                                                JSONObject nutrient = nutrients.getJSONObject(j);
+                                                String name = nutrient.getString("name");
+                                                String amount = nutrient.getString("amount");
+                                                String unit = nutrient.getString("unit");
+                                                nutritionData.put(name, amount + " " + unit);
+                                            }
+                                            recipe.setNutrition(nutritionData);
+
+                                            recipeAdapter.notifyDataSetChanged();
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    },
+                                    error -> {
+                                        error.printStackTrace();
+                                        Toast.makeText(this, "Error retrieving nutrition data", Toast.LENGTH_SHORT).show();
+                                    });
+                            queue.add(nutritionJsonObjectRequest);
+                        }
+                    } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 },
@@ -120,7 +150,6 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
                 });
         queue.add(jsonObjectRequest);
     }
-
     public void onRecipeClick(int position) {
         Recipe recipe = recipes.get(position);
         Intent intent = new Intent(this, RecipeDetailsActivity.class);
@@ -134,6 +163,4 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
         intent.putExtra("recipe", recipe);
         startActivity(intent);
     }
-
-
 }
