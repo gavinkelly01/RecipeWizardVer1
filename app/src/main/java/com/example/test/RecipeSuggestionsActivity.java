@@ -1,9 +1,7 @@
 package com.example.test;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,7 +31,10 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
     private List<Recipe> recipes;
     private List<String> pantryIngredients;
     public static final String EXTRA_RECIPE = "com.example.test.RECIPE";
-    private final String API_KEY = "56f3fc3c51b7482c8fa50e5a1b6c61b1"; // replace with your Spoonacular API key
+    private final String API_KEY = "3bd64de960774274af7148c4123df14a"; // replace with your Spoonacular API key
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,21 +48,22 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        recipes = new ArrayList<>(); // initialize recipes with an empty list
+        recipes = new ArrayList<>();
+        pantryIngredients = getPantryIngredients();
+
         recipeAdapter = new RecipeAdapter(recipes, this);
+        recipeAdapter.setOnRecipeClickListener(this);
         recyclerView.setAdapter(recipeAdapter);
 
-        pantryIngredients = getPantryIngredients(); // initialize pantryIngredients
         loadRecipes();
+
     }
+
+
 
     private List<String> getPantryIngredients() {
         Intent intent = getIntent();
         String ingredientsJson = intent.getStringExtra("ingredients");
-        if (ingredientsJson == null) {
-            // handle null input
-            return new ArrayList<>();
-        }
         Type type = new TypeToken<List<Ingredient>>(){}.getType();
         Gson gson = new Gson();
         List<Ingredient> ingredients = gson.fromJson(ingredientsJson, type);
@@ -69,7 +71,6 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
                 .map(Ingredient::getName)
                 .collect(Collectors.toList());
     }
-
 
     private void loadRecipes() {
         OkHttpClient client = new OkHttpClient();
@@ -95,8 +96,7 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
                     Gson gson = new Gson();
-                    Type recipeListType = new TypeToken<List<Recipe>>() {
-                    }.getType();
+                    Type recipeListType = new TypeToken<List<Recipe>>(){}.getType();
                     List<Recipe> recipeList = gson.fromJson(response.body().string(), recipeListType);
 
                     recipes.addAll(recipeList);
@@ -123,6 +123,11 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
     }
 
     @Override
+    public void onRecipeLongClick(int position) {
+
+    }
+
+    @Override
     public void onRecipeClick(Recipe recipe) {
         Intent intent = new Intent(this, RecipeDetailsActivity.class);
         intent.putExtra("recipe", recipe);
@@ -130,35 +135,4 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
     }
 
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        loadRecipes();
-    }
-
-    private void loadSavedRecipes() {
-        // retrieve saved recipes from shared preferences
-        SharedPreferences sharedPreferences = getSharedPreferences("saved_recipes", MODE_PRIVATE);
-        String savedRecipesJson = sharedPreferences.getString("recipes", null);
-
-        if (savedRecipesJson != null) {
-            Gson gson = new Gson();
-            Type recipeListType = new TypeToken<List<Recipe>>() {
-            }.getType();
-            List<Recipe> savedRecipes = gson.fromJson(savedRecipesJson, recipeListType);
-            recipes.addAll(savedRecipes);
-            recipeAdapter.notifyDataSetChanged();
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 }

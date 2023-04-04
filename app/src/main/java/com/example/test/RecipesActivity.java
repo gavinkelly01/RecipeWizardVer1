@@ -4,23 +4,21 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.example.test.Recipe;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,7 +26,7 @@ import java.util.Map;
 
 public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
 
-    private static final String API_KEY = "56f3fc3c51b7482c8fa50e5a1b6c61b1";
+    private static final String API_KEY = "946300d59ddb45d3ad40c5241b043530";
     private RecyclerView recyclerView;
     private SearchView searchView;
     private BottomNavigationView bottomNavMenu;
@@ -50,6 +48,16 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(recipeAdapter);
         bottomNavMenu = findViewById(R.id.bottom_navigation_recipes);
+
+        Button savedRecipesButton = findViewById(R.id.saved_recipes_button);
+        savedRecipesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecipesActivity.this, SavedRecipesActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         bottomNavMenu.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -73,6 +81,9 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
                         }
                     }
                 });
+
+        bottomNavMenu.getMenu().findItem(R.id.navigation_recipes).setChecked(true);
+
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -155,6 +166,10 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
         Intent intent = new Intent(this, RecipeDetailsActivity.class);
         intent.putExtra("recipe_id", recipe.getId());
         startActivity(intent);
+    }
+
+    @Override
+    public void onRecipeLongClick(int position) {
     }
 
     @Override

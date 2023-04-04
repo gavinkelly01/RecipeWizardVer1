@@ -4,6 +4,8 @@ package com.example.test.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
@@ -26,22 +28,45 @@ public final class ActivityRecipesBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigationRecipes;
 
   @NonNull
+  public final CheckBox glutenFreeCheckbox;
+
+  @NonNull
+  public final CheckBox paleoCheckbox;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
   public final RecyclerView recyclerView;
 
   @NonNull
+  public final Button savedRecipesButton;
+
+  @NonNull
   public final SearchView searchView;
 
+  @NonNull
+  public final CheckBox veganCheckbox;
+
+  @NonNull
+  public final CheckBox vegetarianCheckbox;
+
   private ActivityRecipesBinding(@NonNull LinearLayout rootView,
-      @NonNull BottomNavigationView bottomNavigationRecipes, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView recyclerView, @NonNull SearchView searchView) {
+      @NonNull BottomNavigationView bottomNavigationRecipes, @NonNull CheckBox glutenFreeCheckbox,
+      @NonNull CheckBox paleoCheckbox, @NonNull ProgressBar progressBar,
+      @NonNull RecyclerView recyclerView, @NonNull Button savedRecipesButton,
+      @NonNull SearchView searchView, @NonNull CheckBox veganCheckbox,
+      @NonNull CheckBox vegetarianCheckbox) {
     this.rootView = rootView;
     this.bottomNavigationRecipes = bottomNavigationRecipes;
+    this.glutenFreeCheckbox = glutenFreeCheckbox;
+    this.paleoCheckbox = paleoCheckbox;
     this.progressBar = progressBar;
     this.recyclerView = recyclerView;
+    this.savedRecipesButton = savedRecipesButton;
     this.searchView = searchView;
+    this.veganCheckbox = veganCheckbox;
+    this.vegetarianCheckbox = vegetarianCheckbox;
   }
 
   @Override
@@ -77,6 +102,18 @@ public final class ActivityRecipesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.gluten_free_checkbox;
+      CheckBox glutenFreeCheckbox = ViewBindings.findChildViewById(rootView, id);
+      if (glutenFreeCheckbox == null) {
+        break missingId;
+      }
+
+      id = R.id.paleo_checkbox;
+      CheckBox paleoCheckbox = ViewBindings.findChildViewById(rootView, id);
+      if (paleoCheckbox == null) {
+        break missingId;
+      }
+
       id = R.id.progress_bar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -89,14 +126,33 @@ public final class ActivityRecipesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.saved_recipes_button;
+      Button savedRecipesButton = ViewBindings.findChildViewById(rootView, id);
+      if (savedRecipesButton == null) {
+        break missingId;
+      }
+
       id = R.id.search_view;
       SearchView searchView = ViewBindings.findChildViewById(rootView, id);
       if (searchView == null) {
         break missingId;
       }
 
+      id = R.id.vegan_checkbox;
+      CheckBox veganCheckbox = ViewBindings.findChildViewById(rootView, id);
+      if (veganCheckbox == null) {
+        break missingId;
+      }
+
+      id = R.id.vegetarian_checkbox;
+      CheckBox vegetarianCheckbox = ViewBindings.findChildViewById(rootView, id);
+      if (vegetarianCheckbox == null) {
+        break missingId;
+      }
+
       return new ActivityRecipesBinding((LinearLayout) rootView, bottomNavigationRecipes,
-          progressBar, recyclerView, searchView);
+          glutenFreeCheckbox, paleoCheckbox, progressBar, recyclerView, savedRecipesButton,
+          searchView, veganCheckbox, vegetarianCheckbox);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

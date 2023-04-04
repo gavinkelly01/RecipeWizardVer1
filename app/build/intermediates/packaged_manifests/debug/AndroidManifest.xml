@@ -16,8 +16,6 @@
             android:authorities="com.android.car.ui.plugin" />
     </queries>
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <permission
         android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -32,8 +30,9 @@
         android:enableOnBackInvokedCallback="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/chefhat"
+        android:label="Recipe Wizard"
+        android:logo="@drawable/chefhat"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Test" >
@@ -43,6 +42,14 @@
         </activity>
         <activity
             android:name="com.example.test.RecipeDetailsActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.SavedRecipesActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.RecipeSuggestionsActivity"
             android:exported="true" >
         </activity>
         <activity
@@ -63,10 +70,6 @@
         </activity>
         <activity
             android:name="com.example.test.RegisterActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name="com.example.test.RecipesOwnedIngActivity"
             android:exported="true" >
         </activity>
         <activity
@@ -91,76 +94,6 @@
             android:exported="true"
             android:process="@string/car_ui_installer_process_name"
             android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
-
-        <activity
-            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="firebase.auth"
-                    android:path="/"
-                    android:scheme="genericidp" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="firebase.auth"
-                    android:path="/"
-                    android:scheme="recaptcha" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name="com.google.firebase.components.ComponentDiscoveryService"
-            android:directBootAware="true"
-            android:exported="false" >
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-        </service>
-
-        <provider
-            android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.example.test.com.squareup.picasso"
-            android:exported="false" />
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.test.firebaseinitprovider"
-            android:directBootAware="true"
-            android:exported="false"
-            android:initOrder="100" />
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.test.androidx-startup"

@@ -29,6 +29,30 @@
             android:visibility="gone" />
     </LinearLayout>
 
+    <CheckBox
+        android:id="@+id/vegan_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegan" />
+
+    <CheckBox
+        android:id="@+id/vegetarian_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegetarian" />
+
+    <CheckBox
+        android:id="@+id/gluten_free_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gluten Free" />
+
+    <CheckBox
+        android:id="@+id/paleo_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paleo" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
@@ -37,9 +61,16 @@
         android:focusableInTouchMode="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+    <Button
+        android:id="@+id/saved_recipes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saved Recipes" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_recipes"
         android:layout_width="match_parent"
+        android:checkableBehavior="single"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu" />

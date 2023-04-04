@@ -23,12 +23,10 @@
         android:textAlignment="center"
         android:textSize="24sp" />
 
-
     <Button
         android:id="@+id/random_recipe_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -36,19 +34,21 @@
         android:layout_marginStart="115dp"
         android:layout_marginTop="321dp"
         android:layout_marginEnd="88dp"
-        android:layout_marginBottom="362dp"
+        android:layout_marginBottom="339dp"
         android:onClick="openRandomRecipeActivity"
-        android:text="Get a Random Recipe" />
+        android:text="Click Here to See Recipe!" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_home"
+        android:checkableBehavior="single"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="676dp"
-        android:layout_marginBottom="-1dp"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_marginBottom="-7dp"
+        android:background="?android:attr/windowBackground"
+        app:defaultNavHost="true"
+        app:menu="@menu/bottom_nav_menu"
+        app:navGraph="@navigation/mobile_navigation" />
+
 </RelativeLayout>
 

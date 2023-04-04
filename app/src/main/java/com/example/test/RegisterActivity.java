@@ -3,7 +3,6 @@ package com.example.test;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,6 +53,9 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
+                }else if(password == null){
+                    Toast.makeText(RegisterActivity.this, "Invalid password. Please try again.", Toast.LENGTH_SHORT).show();
+
                 } else {
                     Toast.makeText(RegisterActivity.this, "Invalid email. Please enter a valid email address.", Toast.LENGTH_SHORT).show();
                 }

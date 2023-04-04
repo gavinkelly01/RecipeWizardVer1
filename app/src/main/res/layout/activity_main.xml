@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Adding the toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
@@ -17,7 +16,6 @@
         app:logo="@drawable/ic_chefhat"
         tools:ignore="MissingConstraints" />
 
-    <!-- Adding the Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"

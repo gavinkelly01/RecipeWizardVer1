@@ -340,7 +340,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/search/baseline_search_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/save/baseline_save_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -350,7 +350,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_recipes" />
+                            <entry key="outputName" value="heart" />
                             <entry key="sourceFile" value="C:\Users\gavin\AndroidStudioProjects\Recipe Wizard" />
                           </map>
                         </option>

@@ -1,5 +1,7 @@
 package com.example.test;
 
+import com.google.gson.Gson;
+
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +25,9 @@ public class Recipe implements Serializable {
     }
 
     public Recipe(int id, String title, String imageUrl) {
+        this.id = id;
+        this.title = title;
+        this.imageUrl = imageUrl;
     }
 
     public int getId() {
@@ -40,6 +45,12 @@ public class Recipe implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public static Recipe fromJson(String jsonString) {
+        Gson gson = new Gson();
+        return gson.fromJson(jsonString, Recipe.class);
+    }
+
 
 
     public String getImageUrl() {
@@ -74,8 +85,7 @@ public class Recipe implements Serializable {
         this.nutrition = nutrition;
     }
 
-
     public boolean hasAllIngredients(List<String> pantryIngredients) {
-        return false;
+        return ingredients.containsAll(pantryIngredients);
     }
 }

@@ -4,6 +4,7 @@ package com.example.test.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -21,7 +22,10 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final TextView recipeDescription;
+  public final TextView recipeCookingTime;
+
+  @NonNull
+  public final TextView recipeCookingTimeLabel;
 
   @NonNull
   public final ImageView recipeImage;
@@ -30,10 +34,13 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   public final TextView recipeIngredients;
 
   @NonNull
+  public final TextView recipeIngredientsLabel;
+
+  @NonNull
   public final TextView recipeInstructions;
 
   @NonNull
-  public final TextView recipeInstructionsHeader;
+  public final TextView recipeInstructionsTitle;
 
   @NonNull
   public final TextView recipeNutrition;
@@ -42,22 +49,39 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   public final TextView recipeNutritionLabel;
 
   @NonNull
+  public final TextView recipeServing;
+
+  @NonNull
+  public final TextView recipeServingLabel;
+
+  @NonNull
   public final TextView recipeTitle;
 
+  @NonNull
+  public final Button saveButton;
+
   private ActivityRecipeDetailsBinding(@NonNull RelativeLayout rootView,
-      @NonNull TextView recipeDescription, @NonNull ImageView recipeImage,
-      @NonNull TextView recipeIngredients, @NonNull TextView recipeInstructions,
-      @NonNull TextView recipeInstructionsHeader, @NonNull TextView recipeNutrition,
-      @NonNull TextView recipeNutritionLabel, @NonNull TextView recipeTitle) {
+      @NonNull TextView recipeCookingTime, @NonNull TextView recipeCookingTimeLabel,
+      @NonNull ImageView recipeImage, @NonNull TextView recipeIngredients,
+      @NonNull TextView recipeIngredientsLabel, @NonNull TextView recipeInstructions,
+      @NonNull TextView recipeInstructionsTitle, @NonNull TextView recipeNutrition,
+      @NonNull TextView recipeNutritionLabel, @NonNull TextView recipeServing,
+      @NonNull TextView recipeServingLabel, @NonNull TextView recipeTitle,
+      @NonNull Button saveButton) {
     this.rootView = rootView;
-    this.recipeDescription = recipeDescription;
+    this.recipeCookingTime = recipeCookingTime;
+    this.recipeCookingTimeLabel = recipeCookingTimeLabel;
     this.recipeImage = recipeImage;
     this.recipeIngredients = recipeIngredients;
+    this.recipeIngredientsLabel = recipeIngredientsLabel;
     this.recipeInstructions = recipeInstructions;
-    this.recipeInstructionsHeader = recipeInstructionsHeader;
+    this.recipeInstructionsTitle = recipeInstructionsTitle;
     this.recipeNutrition = recipeNutrition;
     this.recipeNutritionLabel = recipeNutritionLabel;
+    this.recipeServing = recipeServing;
+    this.recipeServingLabel = recipeServingLabel;
     this.recipeTitle = recipeTitle;
+    this.saveButton = saveButton;
   }
 
   @Override
@@ -87,9 +111,15 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.recipe_description;
-      TextView recipeDescription = ViewBindings.findChildViewById(rootView, id);
-      if (recipeDescription == null) {
+      id = R.id.recipe_cooking_time;
+      TextView recipeCookingTime = ViewBindings.findChildViewById(rootView, id);
+      if (recipeCookingTime == null) {
+        break missingId;
+      }
+
+      id = R.id.recipe_cooking_time_label;
+      TextView recipeCookingTimeLabel = ViewBindings.findChildViewById(rootView, id);
+      if (recipeCookingTimeLabel == null) {
         break missingId;
       }
 
@@ -105,15 +135,21 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipe_ingredients_label;
+      TextView recipeIngredientsLabel = ViewBindings.findChildViewById(rootView, id);
+      if (recipeIngredientsLabel == null) {
+        break missingId;
+      }
+
       id = R.id.recipe_instructions;
       TextView recipeInstructions = ViewBindings.findChildViewById(rootView, id);
       if (recipeInstructions == null) {
         break missingId;
       }
 
-      id = R.id.recipe_instructions_header;
-      TextView recipeInstructionsHeader = ViewBindings.findChildViewById(rootView, id);
-      if (recipeInstructionsHeader == null) {
+      id = R.id.recipe_instructions_title;
+      TextView recipeInstructionsTitle = ViewBindings.findChildViewById(rootView, id);
+      if (recipeInstructionsTitle == null) {
         break missingId;
       }
 
@@ -129,15 +165,34 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipe_serving;
+      TextView recipeServing = ViewBindings.findChildViewById(rootView, id);
+      if (recipeServing == null) {
+        break missingId;
+      }
+
+      id = R.id.recipe_serving_label;
+      TextView recipeServingLabel = ViewBindings.findChildViewById(rootView, id);
+      if (recipeServingLabel == null) {
+        break missingId;
+      }
+
       id = R.id.recipe_title;
       TextView recipeTitle = ViewBindings.findChildViewById(rootView, id);
       if (recipeTitle == null) {
         break missingId;
       }
 
-      return new ActivityRecipeDetailsBinding((RelativeLayout) rootView, recipeDescription,
-          recipeImage, recipeIngredients, recipeInstructions, recipeInstructionsHeader,
-          recipeNutrition, recipeNutritionLabel, recipeTitle);
+      id = R.id.save_button;
+      Button saveButton = ViewBindings.findChildViewById(rootView, id);
+      if (saveButton == null) {
+        break missingId;
+      }
+
+      return new ActivityRecipeDetailsBinding((RelativeLayout) rootView, recipeCookingTime,
+          recipeCookingTimeLabel, recipeImage, recipeIngredients, recipeIngredientsLabel,
+          recipeInstructions, recipeInstructionsTitle, recipeNutrition, recipeNutritionLabel,
+          recipeServing, recipeServingLabel, recipeTitle, saveButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

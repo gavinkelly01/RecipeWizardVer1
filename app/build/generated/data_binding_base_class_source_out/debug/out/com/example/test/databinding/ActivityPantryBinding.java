@@ -34,9 +34,6 @@ public final class ActivityPantryBinding implements ViewBinding {
   public final EditText editText;
 
   @NonNull
-  public final Button featbutton;
-
-  @NonNull
   public final FrameLayout fragmentContainer;
 
   @NonNull
@@ -46,21 +43,24 @@ public final class ActivityPantryBinding implements ViewBinding {
   public final BottomNavigationView navView;
 
   @NonNull
+  public final Button recipesButton;
+
+  @NonNull
   public final RecyclerView recyclerView;
 
   private ActivityPantryBinding(@NonNull ConstraintLayout rootView, @NonNull Button addButton,
       @NonNull BottomNavigationView bottomNavigationPantry, @NonNull EditText editText,
-      @NonNull Button featbutton, @NonNull FrameLayout fragmentContainer,
-      @NonNull ListView listView, @NonNull BottomNavigationView navView,
+      @NonNull FrameLayout fragmentContainer, @NonNull ListView listView,
+      @NonNull BottomNavigationView navView, @NonNull Button recipesButton,
       @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
     this.addButton = addButton;
     this.bottomNavigationPantry = bottomNavigationPantry;
     this.editText = editText;
-    this.featbutton = featbutton;
     this.fragmentContainer = fragmentContainer;
     this.listView = listView;
     this.navView = navView;
+    this.recipesButton = recipesButton;
     this.recyclerView = recyclerView;
   }
 
@@ -109,12 +109,6 @@ public final class ActivityPantryBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.featbutton;
-      Button featbutton = ViewBindings.findChildViewById(rootView, id);
-      if (featbutton == null) {
-        break missingId;
-      }
-
       id = R.id.fragment_container;
       FrameLayout fragmentContainer = ViewBindings.findChildViewById(rootView, id);
       if (fragmentContainer == null) {
@@ -133,6 +127,12 @@ public final class ActivityPantryBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.recipes_button;
+      Button recipesButton = ViewBindings.findChildViewById(rootView, id);
+      if (recipesButton == null) {
+        break missingId;
+      }
+
       id = R.id.recycler_view;
       RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
@@ -140,7 +140,7 @@ public final class ActivityPantryBinding implements ViewBinding {
       }
 
       return new ActivityPantryBinding((ConstraintLayout) rootView, addButton,
-          bottomNavigationPantry, editText, featbutton, fragmentContainer, listView, navView,
+          bottomNavigationPantry, editText, fragmentContainer, listView, navView, recipesButton,
           recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);

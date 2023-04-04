@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools" >
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-
-
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:label="Recipe Wizard"
-        android:icon="@drawable/ic_chefhat"
-        android:logo="@drawable/ic_chefhat"
+        android:icon="@drawable/chefhat"
+        android:logo="@drawable/chefhat"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test"
         android:enableOnBackInvokedCallback="true"
@@ -19,6 +17,9 @@
             android:exported="true">
         </activity>
         <activity android:name=".RecipeDetailsActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".SavedRecipesActivity"
             android:exported="true">
         </activity>
         <activity android:name=".RecipeSuggestionsActivity"
