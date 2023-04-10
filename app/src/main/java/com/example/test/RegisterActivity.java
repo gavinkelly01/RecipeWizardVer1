@@ -37,36 +37,45 @@ public class RegisterActivity extends AppCompatActivity {
         mEmailPattern = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
         mSharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
+        //This is the onclick for register button
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //This gets the email and password from the inout fields & the .trim() removes the whitespace after the email address/password
                 String email = mEmailEditText.getText().toString().trim();
                 String password = mPasswordEditText.getText().toString().trim();
 
+                //This checks if the email address matches the regex pattern
                 Matcher matcher = mEmailPattern.matcher(email);
                 if (matcher.matches()) {
+                    //This saves the email address and password the the shared preferences file/
                     SharedPreferences.Editor editor = mSharedPreferences.edit();
                     editor.putString("email", email);
                     editor.putString("password", password);
                     editor.apply();
 
+                    //If the email address and password are valid, this will then bring the user to the main activity which brings the user to the login page.
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }else if(password == null){
+                    //Validation if the user has a correct email and password is empty
                     Toast.makeText(RegisterActivity.this, "Invalid password. Please try again.", Toast.LENGTH_SHORT).show();
 
                 } else {
+                    //If the email address is invalid
                     Toast.makeText(RegisterActivity.this, "Invalid email. Please enter a valid email address.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         View mloginTextView = findViewById(R.id.register_login_text);
+        //This is an onclick listener for the Click Here to log in text.
 
         mloginTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //This redirects the user back to the login activity
                 Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(loginIntent);
             }

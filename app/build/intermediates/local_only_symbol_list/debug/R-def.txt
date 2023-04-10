@@ -79,8 +79,7 @@ id register_login_text
 id register_password
 id register_title
 id save_button
-id saved_recipes_button
-id saved_recipes_recycler_view
+id scroll_view
 id search_view
 id textViewName
 id textViewQuantity
@@ -95,7 +94,6 @@ layout activity_recipe_details
 layout activity_recipes
 layout activity_recipessuggestions
 layout activity_register
-layout activity_saved_recipes
 layout activity_suggestionsdetails
 layout item_ingredient
 layout list_item

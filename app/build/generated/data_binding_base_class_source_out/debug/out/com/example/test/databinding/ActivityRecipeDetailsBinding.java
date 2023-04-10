@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -60,6 +61,9 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
   @NonNull
   public final Button saveButton;
 
+  @NonNull
+  public final ScrollView scrollView;
+
   private ActivityRecipeDetailsBinding(@NonNull RelativeLayout rootView,
       @NonNull TextView recipeCookingTime, @NonNull TextView recipeCookingTimeLabel,
       @NonNull ImageView recipeImage, @NonNull TextView recipeIngredients,
@@ -67,7 +71,7 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
       @NonNull TextView recipeInstructionsTitle, @NonNull TextView recipeNutrition,
       @NonNull TextView recipeNutritionLabel, @NonNull TextView recipeServing,
       @NonNull TextView recipeServingLabel, @NonNull TextView recipeTitle,
-      @NonNull Button saveButton) {
+      @NonNull Button saveButton, @NonNull ScrollView scrollView) {
     this.rootView = rootView;
     this.recipeCookingTime = recipeCookingTime;
     this.recipeCookingTimeLabel = recipeCookingTimeLabel;
@@ -82,6 +86,7 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
     this.recipeServingLabel = recipeServingLabel;
     this.recipeTitle = recipeTitle;
     this.saveButton = saveButton;
+    this.scrollView = scrollView;
   }
 
   @Override
@@ -189,10 +194,16 @@ public final class ActivityRecipeDetailsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scroll_view;
+      ScrollView scrollView = ViewBindings.findChildViewById(rootView, id);
+      if (scrollView == null) {
+        break missingId;
+      }
+
       return new ActivityRecipeDetailsBinding((RelativeLayout) rootView, recipeCookingTime,
           recipeCookingTimeLabel, recipeImage, recipeIngredients, recipeIngredientsLabel,
           recipeInstructions, recipeInstructionsTitle, recipeNutrition, recipeNutritionLabel,
-          recipeServing, recipeServingLabel, recipeTitle, saveButton);
+          recipeServing, recipeServingLabel, recipeTitle, saveButton, scrollView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

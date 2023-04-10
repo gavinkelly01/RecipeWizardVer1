@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" >
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,9 +19,6 @@
             android:exported="true">
         </activity>
         <activity android:name=".RecipeDetailsActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".SavedRecipesActivity"
             android:exported="true">
         </activity>
         <activity android:name=".RecipeSuggestionsActivity"

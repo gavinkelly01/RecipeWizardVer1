@@ -61,12 +61,6 @@
         android:focusableInTouchMode="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-    <Button
-        android:id="@+id/saved_recipes_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Saved Recipes" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_recipes"
         android:layout_width="match_parent"

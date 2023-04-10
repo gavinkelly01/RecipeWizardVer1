@@ -1,35 +1,40 @@
 package com.example.test;
 
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Html;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class RecipeDetailsActivity extends AppCompatActivity {
-
     public static final String EXTRA_RECIPE = "com.example.test.RECIPE";
-    private static final String API_KEY = "946300d59ddb45d3ad40c5241b043530";
+    private static final String API_KEY = "ec0037e7aa88429bb9dcea25e871d93d";
     private TextView titleTextView;
     private ImageView imageView;
     private TextView ingredientsTextView;
@@ -40,6 +45,7 @@ public class RecipeDetailsActivity extends AppCompatActivity {
     private Recipe recipe;
     private ArrayList<Ingredient> pantryIngredients;
     private Gson gson;
+    private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +57,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
 
         //Get the recipe object passed in from the previous activity
         recipe = (Recipe) getIntent().getSerializableExtra("recipe");
-
         //If recipe is null, finish the activity and return
         if (recipe == null) {
             finish();
@@ -67,11 +72,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         servingTextView = findViewById(R.id.recipe_serving);
         cookingTimeTextView = findViewById(R.id.recipe_cooking_time);
 
-        Button saveButton = findViewById(R.id.save_button);
-        saveButton.setOnClickListener(v -> saveRecipe());
-
-
-
         //Load pantry ingredients from shared preferences
         SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
         gson = new Gson();
@@ -85,6 +85,42 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         } else { // If pantryIngredientsJson is null, create new empty list
             pantryIngredients = new ArrayList<>();
         }
+
+        Button saveButton = findViewById(R.id.save_button);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Get the root layout of the activity
+                View rootView = getWindow().getDecorView().getRootView();
+
+                // Create a Bitmap of the root layout
+                rootView.setDrawingCacheEnabled(true);
+                Bitmap bitmap = Bitmap.createBitmap(rootView.getDrawingCache());
+                rootView.setDrawingCacheEnabled(false);
+
+                // Save the Bitmap to the user's device
+                String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+                String fileName = "Recipe_" + timeStamp + ".jpg";
+                File picturesDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                File recipeImageFile = new File(picturesDirectory, fileName);
+
+                try {
+                    // Save the Bitmap to the file path
+                    FileOutputStream fos = new FileOutputStream(recipeImageFile);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fos);
+                    fos.flush();
+                    fos.close();
+
+                    // Show a success message to the user
+                    Toast.makeText(getApplicationContext(), "Recipe saved to Pictures directory", Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    // Show an error message to the user
+                    Toast.makeText(getApplicationContext(), "Error saving recipe", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
         //Get the ID of the recipe
         int recipeId = recipe.getId();
@@ -121,7 +157,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                                 }
                             }
 
-
                             // Highlight pantry ingredients in the ingredient list
                             if (isFoundInPantry) {
                                 ingredientsText.append("<b>").append(ingredientText).append("</b><br>");
@@ -129,7 +164,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                                 ingredientsText.append(ingredientText).append("<br>");
                             }
                         }
-
 
                         //Get the instructions for the recipe from the JSON response
                         JSONArray instructions = response.getJSONArray("analyzedInstructions")
@@ -159,7 +193,6 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                                     instruction = instruction.replaceAll("(?i)" + ingredientName, "<b>" + ingredientName + "</b>");
                                 }
                             }
-
                             //Add the formatted instruction text to the StringBuilder
                             instructionsText.append(instruction).append("<br>");
                         }
@@ -205,31 +238,5 @@ public class RecipeDetailsActivity extends AppCompatActivity {
                 });
         queue.add(jsonObjectRequest);
     }
-
-    private void saveRecipe() {
-        // Get the list of saved recipes from shared preferences
-        SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
-        Gson gson = new Gson();
-        String savedRecipesJson = sharedPreferences.getString("saved_recipes", null);
-
-        // If the saved recipes list is not null, parse the JSON string and store it in a list
-        List<Recipe> savedRecipes;
-        if (savedRecipesJson != null) {
-            Type type = new TypeToken<List<Recipe>>() {}.getType();
-            savedRecipes = gson.fromJson(savedRecipesJson, type);
-        } else { // If the saved recipes list is null, create a new empty list
-            savedRecipes = new ArrayList<>();
-        }
-
-        // Add the current recipe to the saved recipes list
-        savedRecipes.add(recipe);
-
-        // Convert the saved recipes list to a JSON string and store it in shared preferences
-        String updatedSavedRecipesJson = gson.toJson(savedRecipes);
-        sharedPreferences.edit().putString("saved_recipes", updatedSavedRecipesJson).apply();
-
-        // Show a toast message to indicate that the recipe has been saved
-        Toast.makeText(this, "Recipe saved!", Toast.LENGTH_SHORT).show();
     }
 
-}

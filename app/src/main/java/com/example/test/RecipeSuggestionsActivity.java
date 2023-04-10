@@ -43,18 +43,14 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.drawable.ic_chefhat);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-
         recyclerView = findViewById(R.id.recipe_list);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         recipes = new ArrayList<>();
         pantryIngredients = getPantryIngredients();
-
         recipeAdapter = new RecipeAdapter(recipes, this);
         recipeAdapter.setOnRecipeClickListener(this);
         recyclerView.setAdapter(recipeAdapter);
-
         loadRecipes();
 
     }
@@ -67,6 +63,7 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
         Type type = new TypeToken<List<Ingredient>>(){}.getType();
         Gson gson = new Gson();
         List<Ingredient> ingredients = gson.fromJson(ingredientsJson, type);
+        //This maps the ingredients to their names and then returns this list
         return ingredients.stream()
                 .map(Ingredient::getName)
                 .collect(Collectors.toList());
@@ -74,40 +71,36 @@ public class RecipeSuggestionsActivity extends AppCompatActivity implements Reci
 
     private void loadRecipes() {
         OkHttpClient client = new OkHttpClient();
-
+    //This here is the URL for the api request to show 10 recipes using the items in the pantry
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://api.spoonacular.com/recipes/findByIngredients").newBuilder();
         urlBuilder.addQueryParameter("apiKey", API_KEY);
         urlBuilder.addQueryParameter("ingredients", String.join(",", pantryIngredients));
         urlBuilder.addQueryParameter("number", "10");
 
         String url = urlBuilder.build().toString();
-
         Request request = new Request.Builder()
                 .url(url)
                 .build();
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
             }
-
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (response.isSuccessful()) {
+                    //This adds the response into the list of objects for the recipe.
                     Gson gson = new Gson();
                     Type recipeListType = new TypeToken<List<Recipe>>(){}.getType();
                     List<Recipe> recipeList = gson.fromJson(response.body().string(), recipeListType);
-
+                    //This adds the recipes to the list and then it updates the UI
                     recipes.addAll(recipeList);
-
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             recipeAdapter.notifyDataSetChanged();
                         }
                     });
-
                 } else {
                     throw new IOException("Unexpected code " + response);
                 }

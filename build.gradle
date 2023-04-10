@@ -5,7 +5,6 @@ buildscript {
         mavenCentral()  // Maven Central repository
     }
     dependencies {
-
     }
 }
 

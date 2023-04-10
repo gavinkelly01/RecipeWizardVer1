@@ -1,6 +1,10 @@
 package com.example.test;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +22,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 //This class displays the details of a featured recipe, including its title, image, ingredients, instructions, and nutrition information
 public class FeaturedRecipeDetailsActivity extends AppCompatActivity {
@@ -59,6 +69,42 @@ public class FeaturedRecipeDetailsActivity extends AppCompatActivity {
         nutritionTextView = findViewById(R.id.recipe_nutrition);
         servingTextView = findViewById(R.id.recipe_serving);
         cookingTimeTextView = findViewById(R.id.recipe_cooking_time);
+
+        Button saveButton = findViewById(R.id.save_button);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Get the root layout of the activity
+                View rootView = getWindow().getDecorView().getRootView();
+
+                // Create a Bitmap of the root layout
+                rootView.setDrawingCacheEnabled(true);
+                Bitmap bitmap = Bitmap.createBitmap(rootView.getDrawingCache());
+                rootView.setDrawingCacheEnabled(false);
+
+                // Save the Bitmap to the user's device
+                String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+                String fileName = "Recipe_" + timeStamp + ".jpg";
+                File picturesDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+                File recipeImageFile = new File(picturesDirectory, fileName);
+
+                try {
+                    // Save the Bitmap to the file path
+                    FileOutputStream fos = new FileOutputStream(recipeImageFile);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fos);
+                    fos.flush();
+                    fos.close();
+
+                    // Show a success message to the user
+                    Toast.makeText(getApplicationContext(), "Recipe saved to Pictures directory", Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    // Show an error message to the user
+                    Toast.makeText(getApplicationContext(), "Error saving recipe", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+            }
+        });
 
         //This is the URL used to retrieve the recipe details from the Spoonacular API
         String url = "https://api.spoonacular.com/recipes/" + recipeId + "/information?apiKey=" + API_KEY + "&includeNutrition=true";

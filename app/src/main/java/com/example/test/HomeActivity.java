@@ -88,8 +88,6 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
-
-
         loadRandomRecipe();
     }
 
@@ -97,7 +95,6 @@ public class HomeActivity extends AppCompatActivity {
     private void loadRandomRecipe() {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://api.spoonacular.com/recipes/random?apiKey=" + API_KEY;
-
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null,
                 response -> {
                     try {
@@ -107,7 +104,6 @@ public class HomeActivity extends AppCompatActivity {
                         int recipeId = recipeObject.getInt("id");
                         String recipeImageUrl = recipeObject.getString("image");
                         String recipeTitle = recipeObject.getString("title");
-
 
                         //This updates tue UI with the fetched recipe information
                         runOnUiThread(() -> {

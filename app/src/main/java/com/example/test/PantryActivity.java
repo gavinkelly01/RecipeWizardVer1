@@ -83,7 +83,7 @@ public class PantryActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("my_prefs", MODE_PRIVATE);
         gson = new Gson();
 
-        //Check if the ingredients list has been previously saved in SharedPreferences, and if so, add those ingredients to the list and update the adapter.
+        //Check if the ingredients list has been previously saved in SharedPreferences, and if so, add those ingredients to the list.
         String ingredientsJson = sharedPreferences.getString("ingredients", null);
         if (ingredientsJson != null) {
             Type type = new TypeToken<List<Ingredient>>() {
@@ -116,7 +116,7 @@ public class PantryActivity extends AppCompatActivity {
             }
         });
 
-        //Set up the "Find Recipes" button to launch the RecipeSuggestionsActivity with the current list of ingredients as an extra.
+        //Set up the "Find Recipes" button to launch the RecipeSuggestionsActivity with recipes they can make using their ingredients.
         Button recipesButton = findViewById(R.id.recipes_button);
         recipesButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -125,7 +125,6 @@ public class PantryActivity extends AppCompatActivity {
                 Type type = new TypeToken<List<Ingredient>>() {
                 }.getType();
                 List<Ingredient> savedIngredients = gson.fromJson(ingredientsJson, type);
-
                 Intent intent = new Intent(PantryActivity.this, RecipeSuggestionsActivity.class);
                 intent.putExtra("ingredients", gson.toJson(savedIngredients));
                 startActivity(intent);

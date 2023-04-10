@@ -3765,8 +3765,6 @@ id rtl
 id save_button
 id save_non_transition_alpha
 id save_overlay_view
-id saved_recipes_button
-id saved_recipes_recycler_view
 id sawtooth
 id scale
 id screen
@@ -3774,6 +3772,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scroll_view
 id scrollable
 id search
 id search_badge
@@ -4051,7 +4050,6 @@ layout activity_recipe_details
 layout activity_recipes
 layout activity_recipessuggestions
 layout activity_register
-layout activity_saved_recipes
 layout activity_suggestionsdetails
 layout car_ui_alert_dialog_edit_text
 layout car_ui_alert_dialog_list

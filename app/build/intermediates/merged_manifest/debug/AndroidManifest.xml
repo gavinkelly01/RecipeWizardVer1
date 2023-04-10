@@ -9,6 +9,7 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <queries>
         <provider
@@ -42,10 +43,6 @@
         </activity>
         <activity
             android:name="com.example.test.RecipeDetailsActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name="com.example.test.SavedRecipesActivity"
             android:exported="true" >
         </activity>
         <activity
