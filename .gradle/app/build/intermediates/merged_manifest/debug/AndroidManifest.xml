@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.test"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <queries>
+        <provider
+            android:name="com.android.car.ui.plugin.PluginNameProvider"
+            android:authorities="com.android.car.ui.plugin" />
+    </queries>
+
+    <permission
+        android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:enableOnBackInvokedCallback="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/chefhat"
+        android:label="Recipe Wizard"
+        android:logo="@drawable/chefhat"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.Test" >
+        <activity
+            android:name="com.example.test.RecipesActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.RecipeDetailsActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.RecipeSuggestionsActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.FeaturedRecipeDetailsActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.HomeActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.PantryActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.LoginActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.RegisterActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name="com.example.test.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.android.car.ui.core.CarUiInstaller"
+            android:authorities="com.example.test.CarUiInstaller"
+            android:directBootAware="true"
+            android:exported="false"
+            android:process="@string/car_ui_installer_process_name" />
+        <provider
+            android:name="com.android.car.ui.core.SearchResultsProvider"
+            android:authorities="com.example.test.SearchResultsProvider"
+            android:exported="true"
+            android:process="@string/car_ui_installer_process_name"
+            android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.example.test.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+    </application>
+
+</manifest>

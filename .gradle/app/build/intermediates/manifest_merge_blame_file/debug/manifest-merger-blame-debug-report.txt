@@ -1,0 +1,200 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.test"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:4:5-66
+11-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:5:5-6:40
+12-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:5:22-78
+13
+14    <queries>
+14-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:26:5-31:15
+15        <provider
+15-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:27:9-30:67
+16            android:name="com.android.car.ui.plugin.PluginNameProvider"
+16-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:28:13-72
+17            android:authorities="com.android.car.ui.plugin" />
+17-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:29:13-60
+18    </queries>
+19
+20    <permission
+20-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+21        android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.example.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:7:5-54:19
+27        android:allowBackup="true"
+27-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:8:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.9.0] C:\Users\gavin\.gradle\caches\transforms-3\48da4d468f697fb0fb5d56e4c7c822b9\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+29        android:dataExtractionRules="@xml/data_extraction_rules"
+29-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:9:9-65
+30        android:debuggable="true"
+31        android:enableOnBackInvokedCallback="true"
+31-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:16:9-51
+32        android:extractNativeLibs="false"
+33        android:fullBackupContent="@xml/backup_rules"
+33-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:10:9-54
+34        android:icon="@drawable/chefhat"
+34-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:12:9-41
+35        android:label="Recipe Wizard"
+35-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:11:9-38
+36        android:logo="@drawable/chefhat"
+36-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:13:9-41
+37        android:supportsRtl="true"
+37-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:14:9-35
+38        android:testOnly="true"
+39        android:theme="@style/Theme.Test" >
+39-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:15:9-42
+40        <activity
+40-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:18:9-20:20
+41            android:name="com.example.test.RecipesActivity"
+41-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:18:19-50
+42            android:exported="true" >
+42-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:19:13-36
+43        </activity>
+44        <activity
+44-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:21:9-23:20
+45            android:name="com.example.test.RecipeDetailsActivity"
+45-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:21:19-56
+46            android:exported="true" >
+46-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:22:13-36
+47        </activity>
+48        <activity
+48-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:24:9-26:20
+49            android:name="com.example.test.RecipeSuggestionsActivity"
+49-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:24:19-60
+50            android:exported="true" >
+50-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:25:13-36
+51        </activity>
+52        <activity
+52-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:27:9-29:20
+53            android:name="com.example.test.FeaturedRecipeDetailsActivity"
+53-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:27:19-64
+54            android:exported="true" >
+54-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:28:13-36
+55        </activity>
+56        <activity
+56-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:30:9-33:20
+57            android:name="com.example.test.HomeActivity"
+57-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:31:13-41
+58            android:exported="true" >
+58-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:32:13-36
+59        </activity>
+60        <activity
+60-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:34:12-36:20
+61            android:name="com.example.test.PantryActivity"
+61-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:34:22-52
+62            android:exported="true" >
+62-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:35:13-36
+63        </activity>
+64        <activity
+64-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:37:9-40:20
+65            android:name="com.example.test.LoginActivity"
+65-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:38:13-42
+66            android:exported="true" >
+66-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:39:13-36
+67        </activity>
+68        <activity
+68-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:41:9-44:20
+69            android:name="com.example.test.RegisterActivity"
+69-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:42:13-45
+70            android:exported="true" >
+70-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:43:13-36
+71        </activity>
+72        <activity
+72-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:45:9-53:20
+73            android:name="com.example.test.MainActivity"
+73-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:46:13-41
+74            android:exported="true" >
+74-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:47:13-36
+75            <intent-filter>
+75-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:48:13-52:29
+76                <action android:name="android.intent.action.MAIN" />
+76-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:49:17-69
+76-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:49:25-66
+77
+78                <category android:name="android.intent.category.LAUNCHER" />
+78-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:51:17-77
+78-->C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\AndroidManifest.xml:51:27-74
+79            </intent-filter>
+80        </activity>
+81
+82        <provider
+82-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:34:9-39:71
+83            android:name="com.android.car.ui.core.CarUiInstaller"
+83-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:35:13-66
+84            android:authorities="com.example.test.CarUiInstaller"
+84-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:36:13-66
+85            android:directBootAware="true"
+85-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:37:13-43
+86            android:exported="false"
+86-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:38:13-37
+87            android:process="@string/car_ui_installer_process_name" />
+87-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:39:13-68
+88        <provider
+88-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:40:9-45:79
+89            android:name="com.android.car.ui.core.SearchResultsProvider"
+89-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:41:13-73
+90            android:authorities="com.example.test.SearchResultsProvider"
+90-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:42:13-73
+91            android:exported="true"
+91-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:43:13-36
+92            android:process="@string/car_ui_installer_process_name"
+92-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:44:13-68
+93            android:readPermission="com.android.car.ui.READ_SEARCH_RESULTS" />
+93-->[com.android.car.ui:car-ui-lib:2.0.0] C:\Users\gavin\.gradle\caches\transforms-3\13a4752ffc88341ea727d500a67eb759\transformed\car-ui-lib-2.0.0\AndroidManifest.xml:45:13-76
+94        <provider
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+95            android:name="androidx.startup.InitializationProvider"
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+96            android:authorities="com.example.test.androidx-startup"
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+97            android:exported="false" >
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+98            <meta-data
+98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+99                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+100                android:value="androidx.startup" />
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\gavin\.gradle\caches\transforms-3\b534eca45ae0368be30899d5007a440e\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+101            <meta-data
+101-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavin\.gradle\caches\transforms-3\b0761d22b5c86c7f873b7a426ffce717\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+102                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+102-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavin\.gradle\caches\transforms-3\b0761d22b5c86c7f873b7a426ffce717\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+103                android:value="androidx.startup" />
+103-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\gavin\.gradle\caches\transforms-3\b0761d22b5c86c7f873b7a426ffce717\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+104        </provider>
+105
+106        <uses-library
+106-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+107            android:name="androidx.window.extensions"
+107-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+108            android:required="false" />
+108-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+109        <uses-library
+109-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+110            android:name="androidx.window.sidecar"
+110-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+111            android:required="false" />
+111-->[androidx.window:window:1.0.0] C:\Users\gavin\.gradle\caches\transforms-3\366f50b211bd670aa2f01a4a938cfc95\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+112    </application>
+113
+114</manifest>
