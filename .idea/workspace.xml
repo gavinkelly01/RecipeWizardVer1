@@ -124,7 +124,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.RecipesActivity">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="HomeActivity (1)" type="AndroidRunConfigurationType" factoryName="Android App" temporary="true">
       <module name="RecipeWizard.app.main" />
       <option name="DEPLOY" value="true" />

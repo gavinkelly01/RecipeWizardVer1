@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.SearchView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -24,12 +25,20 @@ import java.util.Map;
 
 public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
 
-    private static final String API_KEY = "08559c5dec9b416e8483d2f2a53148f5";
+    private static final String API_KEY = "946300d59ddb45d3ad40c5241b043530";
     private RecyclerView recyclerView;
     private SearchView searchView;
     private BottomNavigationView bottomNavMenu;
     private RecipeAdapter recipeAdapter;
     private final List<Recipe> recipes = new ArrayList<>();
+    private boolean isVegan = false;
+    private boolean isPaleo = false;
+    private boolean isVegetarian = false;
+    private boolean isGlutenFree = false;
+    private CheckBox veganCheckbox;
+    private CheckBox paleoCheckbox;
+    private CheckBox vegetarianCheckbox;
+    private CheckBox glutenFreeCheckbox;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,6 +49,11 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
         getSupportActionBar().setLogo(R.drawable.ic_chefhat);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+
+        veganCheckbox = findViewById(R.id.vegan_checkbox);
+        paleoCheckbox = findViewById(R.id.paleo_checkbox);
+        vegetarianCheckbox = findViewById(R.id.vegetarian_checkbox);
+        glutenFreeCheckbox = findViewById(R.id.gluten_free_checkbox);
         recyclerView = findViewById(R.id.recycler_view);
         searchView = findViewById(R.id.search_view);
         recipeAdapter = new RecipeAdapter(recipes, this);
@@ -93,6 +107,21 @@ public class RecipesActivity extends AppCompatActivity implements RecipeAdapter.
     private void searchRecipes(String query) {
         //This is the url, with the API key and query which consists of the dietary restriction and text searched.
         String url = "https://api.spoonacular.com/recipes/search?apiKey=" + API_KEY + "&query=" + query;
+
+        //Add dietary restrictions to the URL based on the checkboxes selected
+        if (veganCheckbox.isChecked()) {
+            url += "&diet=vegan";
+        }
+        if (paleoCheckbox.isChecked()) {
+            url += "&diet=paleo";
+        }
+        if (vegetarianCheckbox.isChecked()) {
+            url += "&diet=vegetarian";
+        }
+        if (glutenFreeCheckbox.isChecked()) {
+            url += "&diet=glutenFree";
+        }
+
         //This requests a queue for handling the response from the spoonacular API
         RequestQueue queue = Volley.newRequestQueue(this);
         //This gets a json object from the API so it can be easily accessed by us
