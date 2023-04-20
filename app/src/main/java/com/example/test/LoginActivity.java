@@ -15,12 +15,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
-    private EditText mEmailEditText;
-    private EditText mPasswordEditText;
-    private Button mLoginButton;
+    EditText mEmailEditText;
+    EditText mPasswordEditText;
+    Button mLoginButton;
     private TextView mRegisterTextView;
-    private Pattern mEmailPattern;
-    private SharedPreferences mSharedPreferences;
+    Pattern mEmailPattern;
+   SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,4 +85,31 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    public boolean validateLoginCredentials(String email, String password) {
+
+        String savedEmail = mSharedPreferences.getString("email", "");
+        String savedPassword = mSharedPreferences.getString("password", "");
+        Toast.makeText(LoginActivity.this, savedEmail, Toast.LENGTH_SHORT).show();;
+        if (email.equals(savedEmail) && password.equals(savedPassword)){
+            Boolean result = true;
+            return result;
+        } else {
+            Boolean result = false;
+            return result;
+        }
+    }
+
+    public Boolean loginEmailValidate(String email) {
+        mEmailPattern = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+        Matcher matcher = mEmailPattern.matcher(email);
+        if (matcher.matches()) {
+            Boolean result = true;
+            return result;
+        } else {
+            Boolean result = false;
+            return result;
+        }
+    }
+
 }

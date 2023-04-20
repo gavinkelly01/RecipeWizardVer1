@@ -37,11 +37,12 @@ com.example.test.app-lifecycle-viewmodel-savedstate-2.5.1-35 C:\Users\gavin\.gra
 com.example.test.app-navigation-ui-2.5.3-36 C:\Users\gavin\.gradle\caches\transforms-3\f20ec7841814f6556960118daefaffb3\transformed\navigation-ui-2.5.3\res
 com.example.test.app-lifecycle-livedata-core-2.5.1-37 C:\Users\gavin\.gradle\caches\transforms-3\f7e72aec555385520472fe5b01b108b9\transformed\lifecycle-livedata-core-2.5.1\res
 com.example.test.app-appcompat-resources-1.6.1-38 C:\Users\gavin\.gradle\caches\transforms-3\f9cbea646069e80afa4058702cbf29bd\transformed\appcompat-resources-1.6.1\res
-com.example.test.app-pngs-39 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\generated\res\pngs\debug
-com.example.test.app-resValues-40 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\generated\res\resValues\debug
-com.example.test.app-rs-41 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\generated\res\rs\debug
-com.example.test.app-packageDebugResources-42 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.test.app-packageDebugResources-43 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.test.app-merged_res-44 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\intermediates\merged_res\debug
-com.example.test.app-debug-45 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\debug\res
-com.example.test.app-main-46 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\res
+com.example.test.app-core-1.5.0-39 C:\Users\gavin\.gradle\caches\transforms-3\fe6f45397a1b5739b3edc2949198e87d\transformed\core-1.5.0\res
+com.example.test.app-pngs-40 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\generated\res\pngs\debug
+com.example.test.app-resValues-41 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\generated\res\resValues\debug
+com.example.test.app-rs-42 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\generated\res\rs\debug
+com.example.test.app-packageDebugResources-43 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.test.app-packageDebugResources-44 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.test.app-merged_res-45 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\build\intermediates\merged_res\debug
+com.example.test.app-debug-46 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\debug\res
+com.example.test.app-main-47 C:\Users\gavin\AndroidStudioProjects\Recipe Wizard\app\src\main\res

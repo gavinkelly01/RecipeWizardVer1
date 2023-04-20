@@ -119,6 +119,7 @@ string title_activity_home
 string title_activity_pantry
 string title_activity_recipes
 style AppTheme
+style MyTheme
 style Theme.Test
 style Theme.Test.AppBarOverlay
 style Theme.Test.NoActionBar

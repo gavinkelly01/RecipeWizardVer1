@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.test.app-mergeDebugResources-42:/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "com.example.test.app-mergeDebugResources-43:/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gavin\\.gradle\\caches\\transforms-3\\dfe455107600617cfcbe36a5c8cee19f\\transformed\\material-1.8.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",

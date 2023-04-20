@@ -69,8 +69,13 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+
+
         View mloginTextView = findViewById(R.id.register_login_text);
         //This is an onclick listener for the Click Here to log in text.
+
+
+
 
         mloginTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +86,29 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
+    public Boolean passwordValidate(String password){
+        if(password == null){
+            Boolean result = true;
+            return result;
+        } else {
+            Boolean result = false;
+            return result;
+        }
+    }
+
+    public Boolean add(String email) {
+        mEmailPattern = Pattern.compile("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
+        Matcher matcher = mEmailPattern.matcher(email);
+        if (matcher.matches()) {
+            Boolean result = true;
+            return result;
+        } else {
+            Boolean result = false;
+            return result;
+        }
+    }
 }
 
-    
+
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.test.LoginActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-20T13:25:51" hostname="LAPTOP-NET8QF64" time="2.914">
+  <properties/>
+  <testcase name="testValidateSharedPreferences" classname="com.example.test.LoginActivityTest" time="2.914"/>
+  <system-out><![CDATA[Account Saved
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

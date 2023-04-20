@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.test.app-mergeDebugResources-42:/values-iw/values-iw.xml",
+            "outputFile": "com.example.test.app-mergeDebugResources-43:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gavin\\.gradle\\caches\\transforms-3\\13a4752ffc88341ea727d500a67eb759\\transformed\\car-ui-lib-2.0.0\\res\\values-iw\\values.xml",

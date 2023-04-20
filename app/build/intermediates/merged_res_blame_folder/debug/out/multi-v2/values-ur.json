@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.test.app-mergeDebugResources-42:/values-ur/values-ur.xml",
+            "outputFile": "com.example.test.app-mergeDebugResources-43:/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gavin\\.gradle\\caches\\transforms-3\\d9e29c60528367c5dfc28ac28e11b745\\transformed\\preference-1.1.1\\res\\values-ur\\values-ur.xml",

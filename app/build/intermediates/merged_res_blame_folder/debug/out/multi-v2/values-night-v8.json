@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.test.app-mergeDebugResources-42:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.test.app-mergeDebugResources-43:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\gavin\\AndroidStudioProjects\\Recipe Wizard\\app\\src\\main\\res\\values-night\\themes.xml",

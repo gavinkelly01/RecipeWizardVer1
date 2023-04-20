@@ -1,58 +1,50 @@
 [
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_suggestionsdetails.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_suggestionsdetails.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_pantry.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_pantry.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\list_item.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\list_item.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/list_item.xml",
+        "source": "com.example.test.app-main-47:/layout/list_item.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_register.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_register.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_login.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_recipessuggestions.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_recipessuggestions.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_recipessuggestions.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_recipessuggestions.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_login.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_login.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_recipe_details.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_recipe_details.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_home.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_home.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_home.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_home.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\recipe_item.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\recipe_item.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/item_ingredient.xml",
+        "source": "com.example.test.app-main-47:/layout/item_ingredient.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_pantry.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_pantry.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_recipes.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_recipes.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_recipes.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_recipes.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_suggestionsdetails.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_suggestionsdetails.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_main.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/recipe_item.xml",
+        "source": "com.example.test.app-main-47:/layout/recipe_item.xml"
     },
     {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_recipe_details.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_recipe_details.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_main.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.test.app-mergeDebugResources-43:/layout/activity_recipe_details.xml",
-        "source": "com.example.test.app-main-46:/layout/activity_recipe_details.xml"
-    },
-    {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\activity_saved_recipes.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\activity_saved_recipes.xml"
-    },
-    {
-        "merged": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-mergeDebugResources-43:\\layout\\item_ingredient.xml",
-        "source": "C:\\Users\\gavin\\.gradle\\daemon\\7.5\\com.example.test.app-main-46:\\layout\\item_ingredient.xml"
+        "merged": "com.example.test.app-mergeDebugResources-44:/layout/activity_register.xml",
+        "source": "com.example.test.app-main-47:/layout/activity_register.xml"
     }
 ]
